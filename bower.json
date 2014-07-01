@@ -1,0 +1,22 @@
+{
+  "name": "Dr. Elsen ist unterwegs",
+  "version": "0.0.0",
+  "homepage": "https://github.com/bysom/elsenmap",
+  "authors": [
+    "bysom <mail@bysom.org>"
+  ],
+  "description": "Eine Übersichtskarte über die Veranstaltungsorte von Dr. Arne Elsen",
+  "main": "index.html",
+  "keywords": [
+    "Elsen",
+    "Map"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
