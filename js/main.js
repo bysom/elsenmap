@@ -19,14 +19,6 @@ function onEachFeature(feature, layer) {
 	layer.bindPopup(popupContent);
 }
 
-// var popup = L.popup();
-
-// function onMapClick(e) {
-// 	popup
-// 		.setLatLng(e.latlng)
-// 		.setContent("You clicked the map at " + e.latlng.toString())
-// 		.openOn(map);
-// }
 function getColor(prevented){
 	if(prevented){
 		return "#00FF00"
@@ -56,15 +48,4 @@ $.getJSON( "data/standorte.geojson", function( data ) {
 			});
 		}
 	}).addTo(map);
-
-	// var items = [];
-	// $.each( data, function( key, val ) {
-	// 	items.push( "<li id='" + key + "'>" + val + "</li>" );
-	// });
-	// $( "<ul/>", {
-	// 	"class": "my-new-list",
-	// 	html: items.join( "" )
-	// }).appendTo( "body" );
 });
-
-// map.on('click', onMapClick);
