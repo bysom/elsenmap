@@ -65,7 +65,7 @@
     },
     {
       "type": "Feature",
-      "id": "4",
+      "id": "5",
       "properties": {
         "name": "ICF Freiburg Breisgau, Cinemaxx",
         "prevented": false
@@ -80,7 +80,7 @@
     },
     {
       "type": "Feature",
-      "id": "4",
+      "id": "6",
       "properties": {
         "name": "Gesundheitszentrum Gwatt",
         "prevented": false
@@ -95,7 +95,7 @@
     },
     {
       "type": "Feature",
-      "id": "4",
+      "id": "7",
       "properties": {
         "name": "FEG ' Neues Land Emmental'",
         "prevented": false
@@ -110,7 +110,7 @@
     },
     {
       "type": "Feature",
-      "id": "4",
+      "id": "8",
       "properties": {
         "name": "Stadttheater Olten",
         "prevented": false
@@ -125,7 +125,7 @@
     },
     {
       "type": "Feature",
-      "id": "4",
+      "id": "9",
       "properties": {
         "name": "Friedensgemeinde Norden",
         "prevented": false
@@ -140,7 +140,7 @@
     },
     {
       "type": "Feature",
-      "id": "4",
+      "id": "10",
       "properties": {
         "name": "FCG 'Christen im Alltag'",
         "prevented": false
@@ -155,7 +155,7 @@
     },
     {
       "type": "Feature",
-      "id": "4",
+      "id": "11",
       "properties": {
         "name": "Lagerhauskirche Kaiserslautern",
         "prevented": false
@@ -170,7 +170,7 @@
     },
     {
       "type": "Feature",
-      "id": "4",
+      "id": "12",
       "properties": {
         "name": "Freikirchliche Gemeinde Schwäbisch-Hall",
         "prevented": false

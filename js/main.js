@@ -29,6 +29,15 @@ function getColor(prevented){
 }
 
 $.getJSON( "data/standorte.geojson", function( data ) {
+	var re = /<tr>\n[ ]*<td class="kal[\w]+"[\w ="\-:;><\/.?&]+">([\d]{1,2}).([\d]{1,2}).([\d]{2,4})[\w&;<>\/]+\n[ ]*<td class="kal[\w]+"[\w ="\-:;><\/.?&]+">([\w:&;]*)<\/td>\n[ ]*<td class="kal[\w]+"[\w ="\-:;><\/.?&]+>([\w:&;]*)<\/td>\n[ ]*<td class="kal[\w]+"[\w ="\-:;><\/.?&]+>([\w:&;., \-äöüÄÖÜß\/<>@+\(\)'=]*)<\/td>\n[ ]*<td class="kal[\w]+"[\w ="\-:;><\/.?&]+>([\w:&;., \-äöüÄÖÜß\/<>@+\(\)'=]*)<\/td>\n[ ]*<td class="kal[\w]+"[\w ="\-:;><\/.?&]+>([\w:&;., \-äöüÄÖÜß\/<>@+\(\)?'"=]*)<\/td>\n/gi;
+	// var re = /\<tr\>\n[ ]*\<td class\=\"kal[\w]+\"[\w \=\"\-\:\;\>\<\/\.\?\&]+\"\>/gi;
+	$.get('data/kalender.html', function(data2) {
+		console.log("Hallo")
+	    while(row = re.exec(data2)){
+	    	console.log("muh")
+	    	alert(row[0])
+	    }
+	});
 	L.geoJson(data, {
 
 		style: function (feature) {
