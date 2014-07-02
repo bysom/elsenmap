@@ -1,0 +1,827 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7"><link rel="stylesheet" type="text/css" href="http://www.dr-elsen-veranstaltung.de/kalender/kalStyle.css">
+<title>Dr. Arne Elsen</title>
+<meta name="language" content="de" >
+<meta name="Keywords" lang="de" content="">
+<meta name="Description" lang="de" content="" >
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" >
+<meta http-equiv="Content-Script-Type" content="text/javascript" >
+<meta http-equiv="Content-Style-Type" content="text/css" >
+<meta name="author" content="" >
+<meta name="publisher" content="Dr. Arne Elsen" >
+<meta name="copyright" content="" >
+<meta name="date" scheme="Day-Month-Year" content="05-03-2010" >
+<meta name="revisit-after" content="7 days" >
+<meta name="robots" content="index,follow, noodp">
+<meta name="robots" content=”noimageindex”> 
+<meta http-equiv="Cache-Control" content="proxy-revalidate, must-revalidate, max-age=0, no-cache, no-store, s-maxage=0">
+<link media="screen" href="/predigten/wLayout/design/style/design.css" type="text/css" rel="stylesheet" ><link media="print" href="/predigten/wLayout/design/style/print.css" type="text/css" rel="stylesheet" >
+<script language="JavaScript" src="/predigten/wLayout/script/script.js" type="text/javascript"></script>
+<script language="JavaScript" src="/predigten/wLayout/script/wScript.js" type="text/javascript"></script></head>
+
+<body style="background-color:#ecc695">
+
+<table cellpadding=0 cellspacing=0 border=0 id="page">
+<tr><td id="top" valign="top"><div id="logoHead"><p>&nbsp;</p><p>&nbsp;</p><h1>Dr. Arne Elsen</h1></div>
+<div id="naviHead"><table cellpadding=0 cellspacing=0 border=0 class="naviTable"><tr><td valign="top">
+
+<ul>
+<li><a href="/index.php" target="" onClick="if('' == 'popup'){openPopup('/index.php?navanchor=1110000');return false;}" title="Startseite" onfocus="this.blur()">Startseite</a></li>
+
+
+<li><a href="/predigten/person.php" target="" onClick="if('' == 'popup'){openPopup('/predigten/person.php?navanchor=1110005');return false;}" title="Zur Person" onfocus="this.blur()">Zur Person</a></li>
+
+
+<li><a href="/predigten/veranstaltungskalender.php" target="" onClick="if('' == 'popup'){openPopup('/predigten/veranstaltungskalender.php?navanchor=1110001');return false;}" title="Veranstaltungskalender" class="current" onfocus="this.blur()">Veranstaltungskalender</a></li>
+
+
+<li><a href="/predigten/zeugnisse-heilungsberichte.php" target="" onClick="if('' == 'popup'){openPopup('/predigten/zeugnisse-heilungsberichte.php?navanchor=1110006');return false;}" title="Zeugnisse und Heilungsberichte" onfocus="this.blur()">Zeugnisse-Heilungsberichte</a></li>
+
+
+<li><a href="/gaestebuch/index.php" target="" onClick="if('' == 'popup'){openPopup('/gaestebuch/index.php?navanchor=1110002');return false;}" title="Gästebuch" onfocus="this.blur()">Gästebuch</a></li>
+
+
+<li><a href="/predigten/links.php" target="" onClick="if('' == 'popup'){openPopup('/predigten/links.php?navanchor=1110007');return false;}" title="" onfocus="this.blur()">Links</a></li>
+
+
+<li><a href="/predigten/kontakt.php" target="" onClick="if('' == 'popup'){openPopup('/predigten/kontakt.php?navanchor=1110003');return false;}" title="Kontakt" onfocus="this.blur()">Kontakt</a></li>
+
+
+<li><a href="/predigten/impressum.php" target="" onClick="if('' == 'popup'){openPopup('/predigten/impressum.php?navanchor=1110004');return false;}" title="Impressum" onfocus="this.blur()">Impressum</a></li>
+
+
+
+
+
+
+
+
+
+<br class="clear"></ul>
+
+
+ 
+
+ 
+
+
+
+
+
+
+
+ 
+
+ 
+
+
+
+
+
+
+
+ 
+
+ 
+
+
+
+
+
+
+
+ 
+
+</td></tr></table><br class="clear" /></div></td></tr>
+<tr><td id="middleColumn" valign="top"><div class="content">
+<div>
+	<div style="float:left">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<!-- <meta http-equiv="content-type" content="text/html; charset=utf-8"> -->
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="expires" content="0">
+<title>Kalender-Script</title>
+<style type="text/css">
+<!--
+body{background-color:#FFFFF7;}
+h1,h2,h3,h4,div,p,a{font-family:Verdana,Arial,Helvetica;}
+-->
+</style>
+<link rel="stylesheet" type="text/css" href="kalStyle.css">
+</head>
+
+<body>
+<h3 align="center">Veranstaltungskalender</h3>
+
+<div align="center">
+<!-- ++++++++++++++ Beginn Scriptausgabe ++++++++++++++ -->
+
+
+<div class="kalBox">
+
+<div class="kalAktO">
+&nbsp;[&nbsp;<a class="kalAkti" href="/predigten/veranstaltungskalender.php">Terminliste</a>&nbsp;]&nbsp;
+&nbsp;[&nbsp;<a class="kalAkti" href="http://www.dr-elsen-veranstaltung.de/kalender/kalender.php?kal_Aktion=druck&amp;kal_Popup=1" target="prnwin" onclick="PrnWin(this.href);return false;">Termine drucken</a>&nbsp;]&nbsp;
+&nbsp;[&nbsp;<a class="kalAkti" href="/predigten/veranstaltungskalender.php?kal_Aktion=suche">Termine suchen</a>&nbsp;]&nbsp;
+&nbsp;[&nbsp;<a class="kalAkti" href="/predigten/veranstaltungskalender.php?kal_Aktion=login">Anmelden</a>&nbsp;]&nbsp;
+</div>
+
+<script type="text/javascript">function PrnWin(sURL){prnWin=window.open(sURL,"prnwin","width=700,height=800,left=9,top=9,menubar=yes,statusbar=no,toolbar=no,scrollbars=yes,resizable=yes");prnWin.focus();}</script>
+
+<script type="text/javascript">function KalWin(sURL){kalWin=window.open(sURL,"kalwin","width=700,height=800,left=5,top=5,menubar=yes,statusbar=no,toolbar=no,scrollbars=yes,resizable=yes");kalWin.focus();}</script>
+<script type="text/javascript">function ExpWin(sURL){expWin=window.open(sURL,"expwin","width=550,height=500,left=10,top=5,menubar=no,statusbar=no,toolbar=no,scrollbars=yes,resizable=yes");expWin.focus();}</script>
+
+<table class="kalNavi" border="0" cellpadding="0" cellspacing="0">
+ <tr>
+  <td class="kalNavL">Seite 1/3</td>
+  <td class="kalNavi" style="background-image:url(http://www.dr-elsen-veranstaltung.de/kalender/grafik/naviLinks.gif)"><a class="kalNavi" href="/predigten/veranstaltungskalender.php" title="Anfang">|&lt;</a></td>
+  <td class="kalNavi" style="background-image:url(http://www.dr-elsen-veranstaltung.de/kalender/grafik/naviLinks.gif)"><a class="kalNavi" href="/predigten/veranstaltungskalender.php?kal_Start=1" title="Seite1"><b>1</b></a></td>
+  <td class="kalNavi" style="background-image:url(http://www.dr-elsen-veranstaltung.de/kalender/grafik/naviLinks.gif)"><a class="kalNavi" href="/predigten/veranstaltungskalender.php?kal_Start=26" title="Seite2">2</a></td>
+  <td class="kalNavi" style="background-image:url(http://www.dr-elsen-veranstaltung.de/kalender/grafik/naviLinks.gif)"><a class="kalNavi" href="/predigten/veranstaltungskalender.php?kal_Start=51" title="Seite3">3</a></td>
+  <td class="kalNavi" style="background-image:url(http://www.dr-elsen-veranstaltung.de/kalender/grafik/naviRechts.gif)"><a class="kalNavi" href="/predigten/veranstaltungskalender.php?kal_Start=51" title="Ende">&gt;|</a></td>
+ </tr>
+</table>
+
+<table class="kalFilt" border="0" cellpadding="0" cellspacing="0">
+ <tr>
+  <td width="33%" style="text-align:left;">&nbsp;</td>
+  <td width="34%" style="text-align:center;">&nbsp;</td>
+  <td width="33%" style="text-align:right;">
+<div class="kalSFlt">
+<form class="kalFilt" action="/predigten/veranstaltungskalender.php" method="post">
+<table class="kalBlnd" border="0" cellpadding="0" cellspacing="0">
+ <tr>
+  <td class="kalSFlt">Suchen&nbsp;</td>
+  <td class="kalSFlt"><input class="kalFilt" name="kal_Such" value="" /></td>
+  <td class="kalSFlt"><input type="submit" class="kalKnopf" style="background-image:url(http://www.dr-elsen-veranstaltung.de/kalender/grafik/knopfVor.gif)" value="" title="Suchen" /></td>
+ </tr>
+</table>
+</form>
+</div>
+</td>
+ </tr>
+</table>
+
+<p class="kalMeld"></p>
+
+<table class="kalList" border="0" cellpadding="0" cellspacing="0">
+ <tr>
+  <td class="kalKopf">Datum&nbsp;<a href="/predigten/veranstaltungskalender.php?kal_Rueck=1"><img src="http://www.dr-elsen-veranstaltung.de/kalender/grafik/sortiert.gif" width="10" height="10" border="0" title="absteigend sortieren" alt="absteigend sortieren" /></a></td>
+  <td class="kalKopf">Beginnt</td>
+  <td class="kalKopf">Endet</td>
+  <td class="kalKopf">Ort</td>
+  <td class="kalKopf">Betreff</td>
+  <td class="kalKopf">&nbsp;</td>
+  <td class="kalKopf">Beschreibung</td>
+ </tr>
+ <tr>
+  <td class="kalDat1" style="vertical-align:top;"><a class="kalDetl" href="/predigten/veranstaltungskalender.php?kal_Aktion=detail&amp;kal_Nummer=139" title="Termindetails">28.06.2014&nbsp;Sa</a></td>
+  <td class="kalDat1" style="vertical-align:top;text-align:center;">13:30</td>
+  <td class="kalDat1" style="vertical-align:top;text-align:center;">15:00</td>
+  <td class="kalDat1" style="vertical-align:top;">Lagerstr 41,3360 Herzogenbuchsee,FCG Langenthal + chr.Gemeinde im Oberaargau,Schweiz</td>
+  <td class="kalDat1" style="vertical-align:top;"><a class="kalDetl" href="/predigten/veranstaltungskalender.php?kal_Aktion=detail&amp;kal_Nummer=139" title="Termindetails">Heilungsseminar, Heilung aus Gottes Sicht</a></td>
+  <td class="kalDat1" style="vertical-align:top;text-align:center;"><a href="http://www.dr-elsen-veranstaltung.de/kalender/kalender.php?kal_Aktion=export&amp;kal_Popup=1&amp;kal_Nummer=139" target="expwin" onclick="ExpWin(this.href);return false;"><img src="http://www.dr-elsen-veranstaltung.de/kalender/grafik/iconExport.gif" width="16" height="16" border="0" title="Termin übernehmen" alt="Termin übernehmen" /></a></td>
+  <td class="kalDat1" style="vertical-align:top;">Heilungsseminar mit Dr.Arne Elsen aus Hamburg<br />Veranstalter : Pastor Markus Burkhardt <br />markus.burkhardt@gmx.ch, 0787547981<br />Seminargebühren: 30 CHF pro Person incl. Getränke, Snacks und Kaffee.</td>
+ </tr>
+ <tr>
+  <td class="kalDat2" style="vertical-align:top;"><a class="kalDetl" href="/predigten/veranstaltungskalender.php?kal_Aktion=detail&amp;kal_Nummer=205" title="Termindetails">28.06.2014&nbsp;Sa</a></td>
+  <td class="kalDat2" style="vertical-align:top;text-align:center;">16:00</td>
+  <td class="kalDat2" style="vertical-align:top;text-align:center;">17:30</td>
+  <td class="kalDat2" style="vertical-align:top;">Lagerstr 41,3360 Herzogenbuchsee,FCG Langenthal + chr.Gemeinde im Oberaargau,Schweiz</td>
+  <td class="kalDat2" style="vertical-align:top;"><a class="kalDetl" href="/predigten/veranstaltungskalender.php?kal_Aktion=detail&amp;kal_Nummer=205" title="Termindetails">&nbsp;</a></td>
+  <td class="kalDat2" style="vertical-align:top;text-align:center;"><a href="http://www.dr-elsen-veranstaltung.de/kalender/kalender.php?kal_Aktion=export&amp;kal_Popup=1&amp;kal_Nummer=205" target="expwin" onclick="ExpWin(this.href);return false;"><img src="http://www.dr-elsen-veranstaltung.de/kalender/grafik/iconExport.gif" width="16" height="16" border="0" title="Termin übernehmen" alt="Termin übernehmen" /></a></td>
+  <td class="kalDat2" style="vertical-align:top;">Heilungsseminar mit Dr.Arne Elsen aus Hamburg<br />Veranstalter : Pastor Markus Burkhardt <br />markus.burkhardt@gmx.ch, 0787547981<br />Seminargebühren: 30 CHF pro Person incl. Getränke, Snacks und Kaffee</td>
+ </tr>
+ <tr>
+  <td class="kalDat1" style="vertical-align:top;"><a class="kalDetl" href="/predigten/veranstaltungskalender.php?kal_Aktion=detail&amp;kal_Nummer=140" title="Termindetails">28.06.2014&nbsp;Sa</a></td>
+  <td class="kalDat1" style="vertical-align:top;text-align:center;">19:30</td>
+  <td class="kalDat1" style="vertical-align:top;">&nbsp;</td>
+  <td class="kalDat1" style="vertical-align:top;">Lagerstr.41,3360 Herzogenbuchsee, Schweiz</td>
+  <td class="kalDat1" style="vertical-align:top;"><a class="kalDetl" href="/predigten/veranstaltungskalender.php?kal_Aktion=detail&amp;kal_Nummer=140" title="Termindetails">Heilungsgottesdienst, ohne Kinderbetreuung</a></td>
+  <td class="kalDat1" style="vertical-align:top;text-align:center;"><a href="http://www.dr-elsen-veranstaltung.de/kalender/kalender.php?kal_Aktion=export&amp;kal_Popup=1&amp;kal_Nummer=140" target="expwin" onclick="ExpWin(this.href);return false;"><img src="http://www.dr-elsen-veranstaltung.de/kalender/grafik/iconExport.gif" width="16" height="16" border="0" title="Termin übernehmen" alt="Termin übernehmen" /></a></td>
+  <td class="kalDat1" style="vertical-align:top;">Heilungsgottesdienst mit Dr. Arne Elsen aus Hamburg<br />Veranstalter Pastor Markus Burkhardt<br />markus.burkhardt@gmx.ch</td>
+ </tr>
+ <tr>
+  <td class="kalDat2" style="vertical-align:top;"><a class="kalDetl" href="/predigten/veranstaltungskalender.php?kal_Aktion=detail&amp;kal_Nummer=141" title="Termindetails">29.06.2014&nbsp;So</a></td>
+  <td class="kalDat2" style="vertical-align:top;text-align:center;">10:00</td>
+  <td class="kalDat2" style="vertical-align:top;text-align:center;">13:00</td>
+  <td class="kalDat2" style="vertical-align:top;">Lagerstr.41,3360 Herzogenbuchsee, s.o. Schweiz</td>
+  <td class="kalDat2" style="vertical-align:top;"><a class="kalDetl" href="/predigten/veranstaltungskalender.php?kal_Aktion=detail&amp;kal_Nummer=141" title="Termindetails">Heilungsgottesdienst mit Kinderbetreuung</a></td>
+  <td class="kalDat2" style="vertical-align:top;text-align:center;"><a href="http://www.dr-elsen-veranstaltung.de/kalender/kalender.php?kal_Aktion=export&amp;kal_Popup=1&amp;kal_Nummer=141" target="expwin" onclick="ExpWin(this.href);return false;"><img src="http://www.dr-elsen-veranstaltung.de/kalender/grafik/iconExport.gif" width="16" height="16" border="0" title="Termin übernehmen" alt="Termin übernehmen" /></a></td>
+  <td class="kalDat2" style="vertical-align:top;">Heilungsgottesdienst mit Dr Arne Elsen aus Hamburg<br />Veranstalter : Pastor Markus Burkhardt <br />markus.burkhardt@gmx.ch</td>
+ </tr>
+ <tr>
+  <td class="kalAktu" style="vertical-align:top;"><a class="kalDetl" href="/predigten/veranstaltungskalender.php?kal_Aktion=detail&amp;kal_Nummer=210" title="Termindetails">05.07.2014&nbsp;Sa</a></td>
+  <td class="kalAktu" style="vertical-align:top;text-align:center;">14:00</td>
+  <td class="kalAktu" style="vertical-align:top;text-align:center;">15:30</td>
+  <td class="kalAktu" style="vertical-align:top;">Veranstaltungsort: Penta Hotel Gera, Gutenbergstr.2,07548 Gera , Tel : 0365-29090</td>
+  <td class="kalAktu" style="vertical-align:top;"><a class="kalDetl" href="/predigten/veranstaltungskalender.php?kal_Aktion=detail&amp;kal_Nummer=210" title="Termindetails">Heilungsseminar</a></td>
+  <td class="kalAktu" style="vertical-align:top;text-align:center;"><a href="http://www.dr-elsen-veranstaltung.de/kalender/kalender.php?kal_Aktion=export&amp;kal_Popup=1&amp;kal_Nummer=210" target="expwin" onclick="ExpWin(this.href);return false;"><img src="http://www.dr-elsen-veranstaltung.de/kalender/grafik/iconExport.gif" width="16" height="16" border="0" title="Termin übernehmen" alt="Termin übernehmen" /></a></td>
+  <td class="kalAktu" style="vertical-align:top;">Kontakt: Ev.Christengemeinde Gera-Ernsee, Pottendorfer Weg 95,07548 Gera, Tel: 0365-811954<br />pfingstgemeinde.gera@web.de Anmeldung unter: pfingstgemeinde.gera@gmail.com</td>
+ </tr>
+ <tr>
+  <td class="kalDat2" style="vertical-align:top;"><a class="kalDetl" href="/predigten/veranstaltungskalender.php?kal_Aktion=detail&amp;kal_Nummer=211" title="Termindetails">05.07.2014&nbsp;Sa</a></td>
+  <td class="kalDat2" style="vertical-align:top;text-align:center;">16:00</td>
+  <td class="kalDat2" style="vertical-align:top;text-align:center;">17:30</td>
+  <td class="kalDat2" style="vertical-align:top;">Veranstaltungsort: Penta Hotel Gera, Gutenbergstr.2,07548 Gera , Tel : 0365-29090</td>
+  <td class="kalDat2" style="vertical-align:top;"><a class="kalDetl" href="/predigten/veranstaltungskalender.php?kal_Aktion=detail&amp;kal_Nummer=211" title="Termindetails">Heilungsseminar</a></td>
+  <td class="kalDat2" style="vertical-align:top;text-align:center;"><a href="http://www.dr-elsen-veranstaltung.de/kalender/kalender.php?kal_Aktion=export&amp;kal_Popup=1&amp;kal_Nummer=211" target="expwin" onclick="ExpWin(this.href);return false;"><img src="http://www.dr-elsen-veranstaltung.de/kalender/grafik/iconExport.gif" width="16" height="16" border="0" title="Termin übernehmen" alt="Termin übernehmen" /></a></td>
+  <td class="kalDat2" style="vertical-align:top;">Kontakt: Ev.Christengemeinde Gera-Ernsee, Pottendorfer Weg 95,07548 Gera, Tel: 0365-811954<br />pfingstgemeinde.gera@ ANMELDUNG unter:pfingstgemeinde.gera@gmail.com</td>
+ </tr>
+ <tr>
+  <td class="kalDat1" style="vertical-align:top;"><a class="kalDetl" href="/predigten/veranstaltungskalender.php?kal_Aktion=detail&amp;kal_Nummer=212" title="Termindetails">05.07.2014&nbsp;Sa</a></td>
+  <td class="kalDat1" style="vertical-align:top;text-align:center;">19:30</td>
+  <td class="kalDat1" style="vertical-align:top;">&nbsp;</td>
+  <td class="kalDat1" style="vertical-align:top;">Veranstaltungsort: Penta Hotel Gera, Gutenbergstr.2,07548 Gera , Tel : 0365-29090</td>
+  <td class="kalDat1" style="vertical-align:top;"><a class="kalDetl" href="/predigten/veranstaltungskalender.php?kal_Aktion=detail&amp;kal_Nummer=212" title="Termindetails">Heilungsgottesdienst</a></td>
+  <td class="kalDat1" style="vertical-align:top;text-align:center;"><a href="http://www.dr-elsen-veranstaltung.de/kalender/kalender.php?kal_Aktion=export&amp;kal_Popup=1&amp;kal_Nummer=212" target="expwin" onclick="ExpWin(this.href);return false;"><img src="http://www.dr-elsen-veranstaltung.de/kalender/grafik/iconExport.gif" width="16" height="16" border="0" title="Termin übernehmen" alt="Termin übernehmen" /></a></td>
+  <td class="kalDat1" style="vertical-align:top;">Kontakt: Ev.Christengemeinde Gera-Ernsee, Pottendorfer Weg 95,07548 Gera, Tel: 0365-811954<br />pfingstgemeinde.gera@web.de, ANMELDUNG pfingstgemeinde.gera@gmail.com</td>
+ </tr>
+ <tr>
+  <td class="kalDat2" style="vertical-align:top;"><a class="kalDetl" href="/predigten/veranstaltungskalender.php?kal_Aktion=detail&amp;kal_Nummer=213" title="Termindetails">06.07.2014&nbsp;So</a></td>
+  <td class="kalDat2" style="vertical-align:top;text-align:center;">10:00</td>
+  <td class="kalDat2" style="vertical-align:top;">&nbsp;</td>
+  <td class="kalDat2" style="vertical-align:top;">Veranstaltungsort: Penta Hotel Gera, Gutenbergstr.2,07548 Gera , Tel : 0365-29090</td>
+  <td class="kalDat2" style="vertical-align:top;"><a class="kalDetl" href="/predigten/veranstaltungskalender.php?kal_Aktion=detail&amp;kal_Nummer=213" title="Termindetails">Heilungsgottesdienst</a></td>
+  <td class="kalDat2" style="vertical-align:top;text-align:center;"><a href="http://www.dr-elsen-veranstaltung.de/kalender/kalender.php?kal_Aktion=export&amp;kal_Popup=1&amp;kal_Nummer=213" target="expwin" onclick="ExpWin(this.href);return false;"><img src="http://www.dr-elsen-veranstaltung.de/kalender/grafik/iconExport.gif" width="16" height="16" border="0" title="Termin übernehmen" alt="Termin übernehmen" /></a></td>
+  <td class="kalDat2" style="vertical-align:top;">Kontakt: Ev.Christengemeinde Gera-Ernsee, Pottendorfer Weg 95,07548 Gera, Tel: 0365-811954<br />pfingstgemeinde.gera@web.de, Anmeldung pfingstgemeinde.gera@gmail.com</td>
+ </tr>
+ <tr>
+  <td class="kalDat1" style="vertical-align:top;"><a class="kalDetl" href="/predigten/veranstaltungskalender.php?kal_Aktion=detail&amp;kal_Nummer=207" title="Termindetails">19.07.2014&nbsp;Sa</a></td>
+  <td class="kalDat1" style="vertical-align:top;text-align:center;">13:30</td>
+  <td class="kalDat1" style="vertical-align:top;text-align:center;">15:00</td>
+  <td class="kalDat1" style="vertical-align:top;">Musikschule des Landkreises Oldenburg, Burgstr.17,27793 Wildeshausen</td>
+  <td class="kalDat1" style="vertical-align:top;"><a class="kalDetl" href="/predigten/veranstaltungskalender.php?kal_Aktion=detail&amp;kal_Nummer=207" title="Termindetails">Heilungsseminar</a></td>
+  <td class="kalDat1" style="vertical-align:top;text-align:center;"><a href="http://www.dr-elsen-veranstaltung.de/kalender/kalender.php?kal_Aktion=export&amp;kal_Popup=1&amp;kal_Nummer=207" target="expwin" onclick="ExpWin(this.href);return false;"><img src="http://www.dr-elsen-veranstaltung.de/kalender/grafik/iconExport.gif" width="16" height="16" border="0" title="Termin übernehmen" alt="Termin übernehmen" /></a></td>
+  <td class="kalDat1" style="vertical-align:top;">Veranstalter FCG Wildeshausen, Bargloyer Str. 4,27793 Wildeshausen, Kontaktperson: Darius Lewandowski , Gemeindeleiterin : Susanne Schäfer.</td>
+ </tr>
+ <tr>
+  <td class="kalDat2" style="vertical-align:top;"><a class="kalDetl" href="/predigten/veranstaltungskalender.php?kal_Aktion=detail&amp;kal_Nummer=208" title="Termindetails">19.07.2014&nbsp;Sa</a></td>
+  <td class="kalDat2" style="vertical-align:top;text-align:center;">15:30</td>
+  <td class="kalDat2" style="vertical-align:top;text-align:center;">17:00</td>
+  <td class="kalDat2" style="vertical-align:top;">Musikschule des Landkreises Oldenburg, Burgstr.17,27793 Wildeshausen</td>
+  <td class="kalDat2" style="vertical-align:top;"><a class="kalDetl" href="/predigten/veranstaltungskalender.php?kal_Aktion=detail&amp;kal_Nummer=208" title="Termindetails">Heilungsseminar</a></td>
+  <td class="kalDat2" style="vertical-align:top;text-align:center;"><a href="http://www.dr-elsen-veranstaltung.de/kalender/kalender.php?kal_Aktion=export&amp;kal_Popup=1&amp;kal_Nummer=208" target="expwin" onclick="ExpWin(this.href);return false;"><img src="http://www.dr-elsen-veranstaltung.de/kalender/grafik/iconExport.gif" width="16" height="16" border="0" title="Termin übernehmen" alt="Termin übernehmen" /></a></td>
+  <td class="kalDat2" style="vertical-align:top;">Veranstalter FCG Wildeshausen, Bargloyer Str. 4,27793 Wildeshausen, Kontaktperson: Darius Lewandowski , Gemeindeleiterin : Susanne Schäfer</td>
+ </tr>
+ <tr>
+  <td class="kalDat1" style="vertical-align:top;"><a class="kalDetl" href="/predigten/veranstaltungskalender.php?kal_Aktion=detail&amp;kal_Nummer=209" title="Termindetails">19.07.2014&nbsp;Sa</a></td>
+  <td class="kalDat1" style="vertical-align:top;text-align:center;">19:00</td>
+  <td class="kalDat1" style="vertical-align:top;text-align:center;">21:30</td>
+  <td class="kalDat1" style="vertical-align:top;">Musikschule des Landkreises Oldenburg, Burgstr.17,27793 Wildeshausen</td>
+  <td class="kalDat1" style="vertical-align:top;"><a class="kalDetl" href="/predigten/veranstaltungskalender.php?kal_Aktion=detail&amp;kal_Nummer=209" title="Termindetails">Heilungsgottesdienst</a></td>
+  <td class="kalDat1" style="vertical-align:top;text-align:center;"><a href="http://www.dr-elsen-veranstaltung.de/kalender/kalender.php?kal_Aktion=export&amp;kal_Popup=1&amp;kal_Nummer=209" target="expwin" onclick="ExpWin(this.href);return false;"><img src="http://www.dr-elsen-veranstaltung.de/kalender/grafik/iconExport.gif" width="16" height="16" border="0" title="Termin übernehmen" alt="Termin übernehmen" /></a></td>
+  <td class="kalDat1" style="vertical-align:top;">Veranstalter FCG Wildeshausen, Bargloyer Str. 4,27793 Wildeshausen, Kontaktperson: Darius Lewandowski , Gemeindeleiterin : Susanne Schäfer</td>
+ </tr>
+ <tr>
+  <td class="kalDat2" style="vertical-align:top;"><a class="kalDetl" href="/predigten/veranstaltungskalender.php?kal_Aktion=detail&amp;kal_Nummer=203" title="Termindetails">26.07.2014&nbsp;Sa</a></td>
+  <td class="kalDat2" style="vertical-align:top;text-align:center;">14:30</td>
+  <td class="kalDat2" style="vertical-align:top;text-align:center;">18:00</td>
+  <td class="kalDat2" style="vertical-align:top;">FCG Freiburg, Ziegelhofstraße 200, 79110 Freiburg-Lehen</td>
+  <td class="kalDat2" style="vertical-align:top;"><a class="kalDetl" href="/predigten/veranstaltungskalender.php?kal_Aktion=detail&amp;kal_Nummer=203" title="Termindetails">Heilungsseminar</a></td>
+  <td class="kalDat2" style="vertical-align:top;text-align:center;"><a href="http://www.dr-elsen-veranstaltung.de/kalender/kalender.php?kal_Aktion=export&amp;kal_Popup=1&amp;kal_Nummer=203" target="expwin" onclick="ExpWin(this.href);return false;"><img src="http://www.dr-elsen-veranstaltung.de/kalender/grafik/iconExport.gif" width="16" height="16" border="0" title="Termin übernehmen" alt="Termin übernehmen" /></a></td>
+  <td class="kalDat2" style="vertical-align:top;">Veranstalter. FCG Freiburg, Gemeindeleiter: Pastor Hans-Peter Zimpfer</td>
+ </tr>
+ <tr>
+  <td class="kalDat1" style="vertical-align:top;"><a class="kalDetl" href="/predigten/veranstaltungskalender.php?kal_Aktion=detail&amp;kal_Nummer=202" title="Termindetails">27.07.2014&nbsp;So</a></td>
+  <td class="kalDat1" style="vertical-align:top;text-align:center;">11:00</td>
+  <td class="kalDat1" style="vertical-align:top;text-align:center;">13:30</td>
+  <td class="kalDat1" style="vertical-align:top;">ICF Freiburg Breisgau,ICF Freiburg im Breisgau,Cinemaxx Freiburg,Bertoldstr.50,Kinosaal 9,Haltestelle Stadttheater</td>
+  <td class="kalDat1" style="vertical-align:top;"><a class="kalDetl" href="/predigten/veranstaltungskalender.php?kal_Aktion=detail&amp;kal_Nummer=202" title="Termindetails">Heilungsgottesdienst</a></td>
+  <td class="kalDat1" style="vertical-align:top;text-align:center;"><a href="http://www.dr-elsen-veranstaltung.de/kalender/kalender.php?kal_Aktion=export&amp;kal_Popup=1&amp;kal_Nummer=202" target="expwin" onclick="ExpWin(this.href);return false;"><img src="http://www.dr-elsen-veranstaltung.de/kalender/grafik/iconExport.gif" width="16" height="16" border="0" title="Termin übernehmen" alt="Termin übernehmen" /></a></td>
+  <td class="kalDat1" style="vertical-align:top;">ICF Freibung , Gemeindeleiter: Pastor Jörg Gräfingholt</td>
+ </tr>
+ <tr>
+  <td class="kalDat2" style="vertical-align:top;"><a class="kalDetl" href="/predigten/veranstaltungskalender.php?kal_Aktion=detail&amp;kal_Nummer=204" title="Termindetails">27.07.2014&nbsp;So</a></td>
+  <td class="kalDat2" style="vertical-align:top;text-align:center;">18:00</td>
+  <td class="kalDat2" style="vertical-align:top;text-align:center;">21:00</td>
+  <td class="kalDat2" style="vertical-align:top;">FCG Freiburg, Ziegelhofstraße 200, 79110 Freiburg-Lehen, Details folgen</td>
+  <td class="kalDat2" style="vertical-align:top;"><a class="kalDetl" href="/predigten/veranstaltungskalender.php?kal_Aktion=detail&amp;kal_Nummer=204" title="Termindetails">Heilungsgottesdienst</a></td>
+  <td class="kalDat2" style="vertical-align:top;text-align:center;"><a href="http://www.dr-elsen-veranstaltung.de/kalender/kalender.php?kal_Aktion=export&amp;kal_Popup=1&amp;kal_Nummer=204" target="expwin" onclick="ExpWin(this.href);return false;"><img src="http://www.dr-elsen-veranstaltung.de/kalender/grafik/iconExport.gif" width="16" height="16" border="0" title="Termin übernehmen" alt="Termin übernehmen" /></a></td>
+  <td class="kalDat2" style="vertical-align:top;">Veranstalter: FCG Freiburg, Pastor: Hans-Peter Zimpfer</td>
+ </tr>
+ <tr>
+  <td class="kalDat1" style="vertical-align:top;"><a class="kalDetl" href="/predigten/veranstaltungskalender.php?kal_Aktion=detail&amp;kal_Nummer=165" title="Termindetails">16.08.2014&nbsp;Sa</a></td>
+  <td class="kalDat1" style="vertical-align:top;text-align:center;">13:00</td>
+  <td class="kalDat1" style="vertical-align:top;text-align:center;">22:30</td>
+  <td class="kalDat1" style="vertical-align:top;">Gesundheitszentrum Gwatt, Thuner See, Schweiz ( Details folgen)</td>
+  <td class="kalDat1" style="vertical-align:top;"><a class="kalDetl" href="/predigten/veranstaltungskalender.php?kal_Aktion=detail&amp;kal_Nummer=165" title="Termindetails">Heilungskonferenz</a></td>
+  <td class="kalDat1" style="vertical-align:top;text-align:center;"><a href="http://www.dr-elsen-veranstaltung.de/kalender/kalender.php?kal_Aktion=export&amp;kal_Popup=1&amp;kal_Nummer=165" target="expwin" onclick="ExpWin(this.href);return false;"><img src="http://www.dr-elsen-veranstaltung.de/kalender/grafik/iconExport.gif" width="16" height="16" border="0" title="Termin übernehmen" alt="Termin übernehmen" /></a></td>
+  <td class="kalDat1" style="vertical-align:top;">Veranstalter: Walter Bernhard, Gesundheitszentrum Gwatt/Thuner See</td>
+ </tr>
+ <tr>
+  <td class="kalDat2" style="vertical-align:top;"><a class="kalDetl" href="/predigten/veranstaltungskalender.php?kal_Aktion=detail&amp;kal_Nummer=166" title="Termindetails">17.08.2014&nbsp;So</a></td>
+  <td class="kalDat2" style="vertical-align:top;text-align:center;">10:00</td>
+  <td class="kalDat2" style="vertical-align:top;text-align:center;">13:00</td>
+  <td class="kalDat2" style="vertical-align:top;">FEG ' Neues Land Emmental', CH- 3452- Grünenmatt</td>
+  <td class="kalDat2" style="vertical-align:top;"><a class="kalDetl" href="/predigten/veranstaltungskalender.php?kal_Aktion=detail&amp;kal_Nummer=166" title="Termindetails">Heilungsgottesdienst</a></td>
+  <td class="kalDat2" style="vertical-align:top;text-align:center;"><a href="http://www.dr-elsen-veranstaltung.de/kalender/kalender.php?kal_Aktion=export&amp;kal_Popup=1&amp;kal_Nummer=166" target="expwin" onclick="ExpWin(this.href);return false;"><img src="http://www.dr-elsen-veranstaltung.de/kalender/grafik/iconExport.gif" width="16" height="16" border="0" title="Termin übernehmen" alt="Termin übernehmen" /></a></td>
+  <td class="kalDat2" style="vertical-align:top;">Veranstalter: Gemeindeleiter: Pastor W. Wieland, FEG &quot; Neues Land Grünenmatt&quot;</td>
+ </tr>
+ <tr>
+  <td class="kalDat1" style="vertical-align:top;"><a class="kalDetl" href="/predigten/veranstaltungskalender.php?kal_Aktion=detail&amp;kal_Nummer=120" title="Termindetails">22.08.2014&nbsp;Fr</a></td>
+  <td class="kalDat1" style="vertical-align:top;text-align:center;">19:00</td>
+  <td class="kalDat1" style="vertical-align:top;text-align:center;">22:00</td>
+  <td class="kalDat1" style="vertical-align:top;">Stadttheater Olten, Frohburgstraße 1, 4600 Olten, Schweiz</td>
+  <td class="kalDat1" style="vertical-align:top;"><a class="kalDetl" href="/predigten/veranstaltungskalender.php?kal_Aktion=detail&amp;kal_Nummer=120" title="Termindetails">Heilungsabend (öffentlich)</a></td>
+  <td class="kalDat1" style="vertical-align:top;text-align:center;"><a href="http://www.dr-elsen-veranstaltung.de/kalender/kalender.php?kal_Aktion=export&amp;kal_Popup=1&amp;kal_Nummer=120" target="expwin" onclick="ExpWin(this.href);return false;"><img src="http://www.dr-elsen-veranstaltung.de/kalender/grafik/iconExport.gif" width="16" height="16" border="0" title="Termin übernehmen" alt="Termin übernehmen" /></a></td>
+  <td class="kalDat1" style="vertical-align:top;">Veranstalter: Freie Christengemeinde Olten     gottseidank.ch<br />                     Voice of Healig, Oftringen      voice-of-healing.ch</td>
+ </tr>
+ <tr>
+  <td class="kalDat2" style="vertical-align:top;"><a class="kalDetl" href="/predigten/veranstaltungskalender.php?kal_Aktion=detail&amp;kal_Nummer=121" title="Termindetails">23.08.2014&nbsp;Sa</a></td>
+  <td class="kalDat2" style="vertical-align:top;text-align:center;">10:00</td>
+  <td class="kalDat2" style="vertical-align:top;text-align:center;">17:00</td>
+  <td class="kalDat2" style="vertical-align:top;">Stadttheater Olten,Frohburgstr.1,4600 Olten/ Schweiz</td>
+  <td class="kalDat2" style="vertical-align:top;"><a class="kalDetl" href="/predigten/veranstaltungskalender.php?kal_Aktion=detail&amp;kal_Nummer=121" title="Termindetails">Heilungs-Seminar (Details folgen)</a></td>
+  <td class="kalDat2" style="vertical-align:top;text-align:center;"><a href="http://www.dr-elsen-veranstaltung.de/kalender/kalender.php?kal_Aktion=export&amp;kal_Popup=1&amp;kal_Nummer=121" target="expwin" onclick="ExpWin(this.href);return false;"><img src="http://www.dr-elsen-veranstaltung.de/kalender/grafik/iconExport.gif" width="16" height="16" border="0" title="Termin übernehmen" alt="Termin übernehmen" /></a></td>
+  <td class="kalDat2" style="vertical-align:top;">Veranstalter Freie Christengemeinde Olten,gottseidank.ch<br />Voice of Healing,Oftringen, voice-of-healing.ch</td>
+ </tr>
+ <tr>
+  <td class="kalDat1" style="vertical-align:top;"><a class="kalDetl" href="/predigten/veranstaltungskalender.php?kal_Aktion=detail&amp;kal_Nummer=122" title="Termindetails">23.08.2014&nbsp;Sa</a></td>
+  <td class="kalDat1" style="vertical-align:top;text-align:center;">19:00</td>
+  <td class="kalDat1" style="vertical-align:top;text-align:center;">22:00</td>
+  <td class="kalDat1" style="vertical-align:top;">Stadttheater Olten, Frohburgstraße 1, 4600 Olten, Schweiz</td>
+  <td class="kalDat1" style="vertical-align:top;"><a class="kalDetl" href="/predigten/veranstaltungskalender.php?kal_Aktion=detail&amp;kal_Nummer=122" title="Termindetails">Heilungsabend (öffentlich)</a></td>
+  <td class="kalDat1" style="vertical-align:top;text-align:center;"><a href="http://www.dr-elsen-veranstaltung.de/kalender/kalender.php?kal_Aktion=export&amp;kal_Popup=1&amp;kal_Nummer=122" target="expwin" onclick="ExpWin(this.href);return false;"><img src="http://www.dr-elsen-veranstaltung.de/kalender/grafik/iconExport.gif" width="16" height="16" border="0" title="Termin übernehmen" alt="Termin übernehmen" /></a></td>
+  <td class="kalDat1" style="vertical-align:top;">Veranstalter Freie Christengemeinde Olten     gottseidank.ch<br />                     Voice of Healig, Oftringen      voice-of-healing.ch</td>
+ </tr>
+ <tr>
+  <td class="kalDat2" style="vertical-align:top;"><a class="kalDetl" href="/predigten/veranstaltungskalender.php?kal_Aktion=detail&amp;kal_Nummer=123" title="Termindetails">24.08.2014&nbsp;So</a></td>
+  <td class="kalDat2" style="vertical-align:top;text-align:center;">10:00</td>
+  <td class="kalDat2" style="vertical-align:top;text-align:center;">12:30</td>
+  <td class="kalDat2" style="vertical-align:top;">Stadttheater Olten, Frohburgstraße 1, 4600 Olten, Schweiz</td>
+  <td class="kalDat2" style="vertical-align:top;"><a class="kalDetl" href="/predigten/veranstaltungskalender.php?kal_Aktion=detail&amp;kal_Nummer=123" title="Termindetails">Heilungsgottesdienst (öffentlich)</a></td>
+  <td class="kalDat2" style="vertical-align:top;text-align:center;"><a href="http://www.dr-elsen-veranstaltung.de/kalender/kalender.php?kal_Aktion=export&amp;kal_Popup=1&amp;kal_Nummer=123" target="expwin" onclick="ExpWin(this.href);return false;"><img src="http://www.dr-elsen-veranstaltung.de/kalender/grafik/iconExport.gif" width="16" height="16" border="0" title="Termin übernehmen" alt="Termin übernehmen" /></a></td>
+  <td class="kalDat2" style="vertical-align:top;">Veranstalter Freie Christengemeinde Olten     gottseidank.ch<br />                     Voice of Healig, Oftringen      voice-of-healing.ch</td>
+ </tr>
+ <tr>
+  <td class="kalDat1" style="vertical-align:top;"><a class="kalDetl" href="/predigten/veranstaltungskalender.php?kal_Aktion=detail&amp;kal_Nummer=132" title="Termindetails">06.09.2014&nbsp;Sa</a></td>
+  <td class="kalDat1" style="vertical-align:top;text-align:center;">14:30</td>
+  <td class="kalDat1" style="vertical-align:top;text-align:center;">18:00</td>
+  <td class="kalDat1" style="vertical-align:top;">Friedensgemeinde Norden, Am Schlicktief 3, 26506 Norden</td>
+  <td class="kalDat1" style="vertical-align:top;"><a class="kalDetl" href="/predigten/veranstaltungskalender.php?kal_Aktion=detail&amp;kal_Nummer=132" title="Termindetails">Workshop für Mitarbeiter</a></td>
+  <td class="kalDat1" style="vertical-align:top;text-align:center;"><a href="http://www.dr-elsen-veranstaltung.de/kalender/kalender.php?kal_Aktion=export&amp;kal_Popup=1&amp;kal_Nummer=132" target="expwin" onclick="ExpWin(this.href);return false;"><img src="http://www.dr-elsen-veranstaltung.de/kalender/grafik/iconExport.gif" width="16" height="16" border="0" title="Termin übernehmen" alt="Termin übernehmen" /></a></td>
+  <td class="kalDat1" style="vertical-align:top;">Wie bete ich für Kranke</td>
+ </tr>
+ <tr>
+  <td class="kalDat2" style="vertical-align:top;"><a class="kalDetl" href="/predigten/veranstaltungskalender.php?kal_Aktion=detail&amp;kal_Nummer=133" title="Termindetails">06.09.2014&nbsp;Sa</a></td>
+  <td class="kalDat2" style="vertical-align:top;text-align:center;">19:30</td>
+  <td class="kalDat2" style="vertical-align:top;text-align:center;">22:00</td>
+  <td class="kalDat2" style="vertical-align:top;">Friedensgemeinde Norden, Am Schlicktief 3, 26506 Norden</td>
+  <td class="kalDat2" style="vertical-align:top;"><a class="kalDetl" href="/predigten/veranstaltungskalender.php?kal_Aktion=detail&amp;kal_Nummer=133" title="Termindetails">Heilungsgottesdienst</a></td>
+  <td class="kalDat2" style="vertical-align:top;text-align:center;"><a href="http://www.dr-elsen-veranstaltung.de/kalender/kalender.php?kal_Aktion=export&amp;kal_Popup=1&amp;kal_Nummer=133" target="expwin" onclick="ExpWin(this.href);return false;"><img src="http://www.dr-elsen-veranstaltung.de/kalender/grafik/iconExport.gif" width="16" height="16" border="0" title="Termin übernehmen" alt="Termin übernehmen" /></a></td>
+  <td class="kalDat2" style="vertical-align:top;">&nbsp;</td>
+ </tr>
+ <tr>
+  <td class="kalDat1" style="vertical-align:top;"><a class="kalDetl" href="/predigten/veranstaltungskalender.php?kal_Aktion=detail&amp;kal_Nummer=134" title="Termindetails">07.09.2014&nbsp;So</a></td>
+  <td class="kalDat1" style="vertical-align:top;text-align:center;">10:00</td>
+  <td class="kalDat1" style="vertical-align:top;text-align:center;">13:00</td>
+  <td class="kalDat1" style="vertical-align:top;">Friedensgemeinde Norden, Am Schlicktief 3, 26506 Norden</td>
+  <td class="kalDat1" style="vertical-align:top;"><a class="kalDetl" href="/predigten/veranstaltungskalender.php?kal_Aktion=detail&amp;kal_Nummer=134" title="Termindetails">Heilungsgottesdienst</a></td>
+  <td class="kalDat1" style="vertical-align:top;text-align:center;"><a href="http://www.dr-elsen-veranstaltung.de/kalender/kalender.php?kal_Aktion=export&amp;kal_Popup=1&amp;kal_Nummer=134" target="expwin" onclick="ExpWin(this.href);return false;"><img src="http://www.dr-elsen-veranstaltung.de/kalender/grafik/iconExport.gif" width="16" height="16" border="0" title="Termin übernehmen" alt="Termin übernehmen" /></a></td>
+  <td class="kalDat1" style="vertical-align:top;">&nbsp;</td>
+ </tr>
+ <tr>
+  <td class="kalDat2" style="vertical-align:top;"><a class="kalDetl" href="/predigten/veranstaltungskalender.php?kal_Aktion=detail&amp;kal_Nummer=128" title="Termindetails">12.09.2014&nbsp;Fr</a></td>
+  <td class="kalDat2" style="vertical-align:top;text-align:center;">19:45</td>
+  <td class="kalDat2" style="vertical-align:top;text-align:center;">22:00</td>
+  <td class="kalDat2" style="vertical-align:top;">FCG 'Christen im Alltag', Gfäll 19,6941 Langenegg, Österreich</td>
+  <td class="kalDat2" style="vertical-align:top;"><a class="kalDetl" href="/predigten/veranstaltungskalender.php?kal_Aktion=detail&amp;kal_Nummer=128" title="Termindetails">Seminar Teil 1 mit Heilungsgebet für Kranke</a></td>
+  <td class="kalDat2" style="vertical-align:top;text-align:center;"><a href="http://www.dr-elsen-veranstaltung.de/kalender/kalender.php?kal_Aktion=export&amp;kal_Popup=1&amp;kal_Nummer=128" target="expwin" onclick="ExpWin(this.href);return false;"><img src="http://www.dr-elsen-veranstaltung.de/kalender/grafik/iconExport.gif" width="16" height="16" border="0" title="Termin übernehmen" alt="Termin übernehmen" /></a></td>
+  <td class="kalDat2" style="vertical-align:top;">&nbsp;</td>
+ </tr>
+ <tr>
+  <td class="kalDat1" style="vertical-align:top;"><a class="kalDetl" href="/predigten/veranstaltungskalender.php?kal_Aktion=detail&amp;kal_Nummer=129" title="Termindetails">13.09.2014&nbsp;Sa</a></td>
+  <td class="kalDat1" style="vertical-align:top;text-align:center;">13:00</td>
+  <td class="kalDat1" style="vertical-align:top;text-align:center;">16:30</td>
+  <td class="kalDat1" style="vertical-align:top;">FCG 'Christen im Alltag', Gfäll 19,6941 Langenegg, Österreich</td>
+  <td class="kalDat1" style="vertical-align:top;"><a class="kalDetl" href="/predigten/veranstaltungskalender.php?kal_Aktion=detail&amp;kal_Nummer=129" title="Termindetails">Zweiteiliges Seminar für Multiplikatoren ( 30,00 Euro nur mit Anmeldung )</a></td>
+  <td class="kalDat1" style="vertical-align:top;text-align:center;"><a href="http://www.dr-elsen-veranstaltung.de/kalender/kalender.php?kal_Aktion=export&amp;kal_Popup=1&amp;kal_Nummer=129" target="expwin" onclick="ExpWin(this.href);return false;"><img src="http://www.dr-elsen-veranstaltung.de/kalender/grafik/iconExport.gif" width="16" height="16" border="0" title="Termin übernehmen" alt="Termin übernehmen" /></a></td>
+  <td class="kalDat1" style="vertical-align:top;">Die Anmeldungen für das Seminar bis spätestens 02.09.2014 an office@christenimalltag.at</td>
+ </tr>
+</table>
+
+<table class="kalNavi" border="0" cellpadding="0" cellspacing="0">
+ <tr>
+  <td class="kalNavL">Seite 1/3</td>
+  <td class="kalNavi" style="background-image:url(http://www.dr-elsen-veranstaltung.de/kalender/grafik/naviLinks.gif)"><a class="kalNavi" href="/predigten/veranstaltungskalender.php" title="Anfang">|&lt;</a></td>
+  <td class="kalNavi" style="background-image:url(http://www.dr-elsen-veranstaltung.de/kalender/grafik/naviLinks.gif)"><a class="kalNavi" href="/predigten/veranstaltungskalender.php?kal_Start=1" title="Seite1"><b>1</b></a></td>
+  <td class="kalNavi" style="background-image:url(http://www.dr-elsen-veranstaltung.de/kalender/grafik/naviLinks.gif)"><a class="kalNavi" href="/predigten/veranstaltungskalender.php?kal_Start=26" title="Seite2">2</a></td>
+  <td class="kalNavi" style="background-image:url(http://www.dr-elsen-veranstaltung.de/kalender/grafik/naviLinks.gif)"><a class="kalNavi" href="/predigten/veranstaltungskalender.php?kal_Start=51" title="Seite3">3</a></td>
+  <td class="kalNavi" style="background-image:url(http://www.dr-elsen-veranstaltung.de/kalender/grafik/naviRechts.gif)"><a class="kalNavi" href="/predigten/veranstaltungskalender.php?kal_Start=51" title="Ende">&gt;|</a></td>
+ </tr>
+</table>
+
+</div>
+
+
+<!-- +++++++++++++++ Ende Scriptausgabe +++++++++++++++ -->
+</div>
+
+</body>
+</html>
+	</div>
+	<div style="float:right">
+
+<div class="kalBox">
+
+<table class="kalBlnd" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="kalBlnd" style="vertical-align:top;"><!-- MiniKalender 1.1 -->
+<div class="kalMini">
+<table class="kalMini" border="0" cellpadding="0" cellspacing="0">
+ <tr>
+  <td class="kalMinK"><a class="kalMinK" href="/predigten/veranstaltungskalender.php?kal_Mini=2014-06" title="Juni 2014">&laquo;</a></td>
+  <td class="kalMinK" colspan="5"><a class="kalMinK" href="/predigten/veranstaltungskalender.php?kal_Intervall=0&amp;kal_1F1=01.07.2014&amp;kal_1F2=31.07.2014&amp;kal_Mini=2014-07" target="kalender">Juli 2014</a></td>
+  <td class="kalMinK"><a class="kalMinK" href="/predigten/veranstaltungskalender.php?kal_Mini=2014-08" title="Aug. 2014">&raquo;</a></td>
+ </tr>
+ <tr>
+  <td class="kalMinK">Mo</td><td class="kalMinK">Di</td><td class="kalMinK">Mi</td><td class="kalMinK">Do</td><td class="kalMinK">Fr</td><td class="kalMinK">Sa</td><td class="kalMinK">So</td>
+ </tr>
+ <tr>
+  <td class="kalMinX">.</td>
+  <td class="kalMinH">1</td>
+  <td class="kalMinD">2</td>
+  <td class="kalMinD">3</td>
+  <td class="kalMinD">4</td>
+  <td class="kalMinL"><a class="kalMinL" href="/predigten/veranstaltungskalender.php?kal_Intervall=0&amp;kal_1F1=05.07.2014&amp;kal_Mini=2014-07" target="kalender" title="05.07.2014, 
+05.07.2014, 
+05.07.2014">&nbsp;5&nbsp;</a></td>
+  <td class="kalMinL"><a class="kalMinL" href="/predigten/veranstaltungskalender.php?kal_Aktion=detail&amp;kal_Nummer=213&amp;kal_Intervall=0&amp;kal_1F1=06.07.2014&amp;kal_Mini=2014-07" target="kalender" title="06.07.2014">&nbsp;6&nbsp;</a></td>
+ </tr>
+ <tr>
+  <td class="kalMinD">7</td>
+  <td class="kalMinD">8</td>
+  <td class="kalMinD">9</td>
+  <td class="kalMinD">10</td>
+  <td class="kalMinD">11</td>
+  <td class="kalMinD">12</td>
+  <td class="kalMinD">13</td>
+ </tr>
+ <tr>
+  <td class="kalMinD">14</td>
+  <td class="kalMinD">15</td>
+  <td class="kalMinD">16</td>
+  <td class="kalMinD">17</td>
+  <td class="kalMinD">18</td>
+  <td class="kalMinL"><a class="kalMinL" href="/predigten/veranstaltungskalender.php?kal_Intervall=0&amp;kal_1F1=19.07.2014&amp;kal_Mini=2014-07" target="kalender" title="19.07.2014, 
+19.07.2014, 
+19.07.2014">19</a></td>
+  <td class="kalMinD">20</td>
+ </tr>
+ <tr>
+  <td class="kalMinD">21</td>
+  <td class="kalMinD">22</td>
+  <td class="kalMinD">23</td>
+  <td class="kalMinD">24</td>
+  <td class="kalMinD">25</td>
+  <td class="kalMinL"><a class="kalMinL" href="/predigten/veranstaltungskalender.php?kal_Aktion=detail&amp;kal_Nummer=203&amp;kal_Intervall=0&amp;kal_1F1=26.07.2014&amp;kal_Mini=2014-07" target="kalender" title="26.07.2014">26</a></td>
+  <td class="kalMinL"><a class="kalMinL" href="/predigten/veranstaltungskalender.php?kal_Intervall=0&amp;kal_1F1=27.07.2014&amp;kal_Mini=2014-07" target="kalender" title="27.07.2014, 
+27.07.2014">27</a></td>
+ </tr>
+ <tr>
+  <td class="kalMinD">28</td>
+  <td class="kalMinD">29</td>
+  <td class="kalMinD">30</td>
+  <td class="kalMinD">31</td>
+  <td class="kalMinX">.</td>
+  <td class="kalMinX">.</td>
+  <td class="kalMinX">.</td>
+ </tr>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td class="kalBlnd" style="vertical-align:top;"><!-- MiniKalender 2.1 -->
+<div class="kalMini">
+<table class="kalMini" border="0" cellpadding="0" cellspacing="0">
+ <tr>
+  <td class="kalMinK"><a class="kalMinK" href="/predigten/veranstaltungskalender.php?kal_Mini=2014-06" title="Juli 2014">&laquo;</a></td>
+  <td class="kalMinK" colspan="5"><a class="kalMinK" href="/predigten/veranstaltungskalender.php?kal_Intervall=0&amp;kal_1F1=01.08.2014&amp;kal_1F2=31.08.2014&amp;kal_Mini=2014-07" target="kalender">Aug. 2014</a></td>
+  <td class="kalMinK"><a class="kalMinK" href="/predigten/veranstaltungskalender.php?kal_Mini=2014-08" title="Sept. 2014">&raquo;</a></td>
+ </tr>
+ <tr>
+  <td class="kalMinK">Mo</td><td class="kalMinK">Di</td><td class="kalMinK">Mi</td><td class="kalMinK">Do</td><td class="kalMinK">Fr</td><td class="kalMinK">Sa</td><td class="kalMinK">So</td>
+ </tr>
+ <tr>
+  <td class="kalMinX">.</td>
+  <td class="kalMinX">.</td>
+  <td class="kalMinX">.</td>
+  <td class="kalMinX">.</td>
+  <td class="kalMinD">1</td>
+  <td class="kalMinD">2</td>
+  <td class="kalMinD">3</td>
+ </tr>
+ <tr>
+  <td class="kalMinD">4</td>
+  <td class="kalMinD">5</td>
+  <td class="kalMinD">6</td>
+  <td class="kalMinD">7</td>
+  <td class="kalMinD">8</td>
+  <td class="kalMinD">9</td>
+  <td class="kalMinD">10</td>
+ </tr>
+ <tr>
+  <td class="kalMinD">11</td>
+  <td class="kalMinD">12</td>
+  <td class="kalMinD">13</td>
+  <td class="kalMinD">14</td>
+  <td class="kalMinD">15</td>
+  <td class="kalMinL"><a class="kalMinL" href="/predigten/veranstaltungskalender.php?kal_Aktion=detail&amp;kal_Nummer=165&amp;kal_Intervall=0&amp;kal_1F1=16.08.2014&amp;kal_Mini=2014-07" target="kalender" title="16.08.2014">16</a></td>
+  <td class="kalMinL"><a class="kalMinL" href="/predigten/veranstaltungskalender.php?kal_Aktion=detail&amp;kal_Nummer=166&amp;kal_Intervall=0&amp;kal_1F1=17.08.2014&amp;kal_Mini=2014-07" target="kalender" title="17.08.2014">17</a></td>
+ </tr>
+ <tr>
+  <td class="kalMinD">18</td>
+  <td class="kalMinD">19</td>
+  <td class="kalMinD">20</td>
+  <td class="kalMinD">21</td>
+  <td class="kalMinL"><a class="kalMinL" href="/predigten/veranstaltungskalender.php?kal_Aktion=detail&amp;kal_Nummer=120&amp;kal_Intervall=0&amp;kal_1F1=22.08.2014&amp;kal_Mini=2014-07" target="kalender" title="22.08.2014">22</a></td>
+  <td class="kalMinL"><a class="kalMinL" href="/predigten/veranstaltungskalender.php?kal_Intervall=0&amp;kal_1F1=23.08.2014&amp;kal_Mini=2014-07" target="kalender" title="23.08.2014, 
+23.08.2014">23</a></td>
+  <td class="kalMinL"><a class="kalMinL" href="/predigten/veranstaltungskalender.php?kal_Aktion=detail&amp;kal_Nummer=123&amp;kal_Intervall=0&amp;kal_1F1=24.08.2014&amp;kal_Mini=2014-07" target="kalender" title="24.08.2014">24</a></td>
+ </tr>
+ <tr>
+  <td class="kalMinD">25</td>
+  <td class="kalMinD">26</td>
+  <td class="kalMinD">27</td>
+  <td class="kalMinD">28</td>
+  <td class="kalMinD">29</td>
+  <td class="kalMinD">30</td>
+  <td class="kalMinD">31</td>
+ </tr>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td class="kalBlnd" style="vertical-align:top;"><!-- MiniKalender 3.1 -->
+<div class="kalMini">
+<table class="kalMini" border="0" cellpadding="0" cellspacing="0">
+ <tr>
+  <td class="kalMinK"><a class="kalMinK" href="/predigten/veranstaltungskalender.php?kal_Mini=2014-06" title="Aug. 2014">&laquo;</a></td>
+  <td class="kalMinK" colspan="5"><a class="kalMinK" href="/predigten/veranstaltungskalender.php?kal_Intervall=0&amp;kal_1F1=01.09.2014&amp;kal_1F2=30.09.2014&amp;kal_Mini=2014-07" target="kalender">Sept. 2014</a></td>
+  <td class="kalMinK"><a class="kalMinK" href="/predigten/veranstaltungskalender.php?kal_Mini=2014-08" title="Okt. 2014">&raquo;</a></td>
+ </tr>
+ <tr>
+  <td class="kalMinK">Mo</td><td class="kalMinK">Di</td><td class="kalMinK">Mi</td><td class="kalMinK">Do</td><td class="kalMinK">Fr</td><td class="kalMinK">Sa</td><td class="kalMinK">So</td>
+ </tr>
+ <tr>
+  <td class="kalMinD">1</td>
+  <td class="kalMinD">2</td>
+  <td class="kalMinD">3</td>
+  <td class="kalMinD">4</td>
+  <td class="kalMinD">5</td>
+  <td class="kalMinL"><a class="kalMinL" href="/predigten/veranstaltungskalender.php?kal_Intervall=0&amp;kal_1F1=06.09.2014&amp;kal_Mini=2014-07" target="kalender" title="06.09.2014, 
+06.09.2014">&nbsp;6&nbsp;</a></td>
+  <td class="kalMinL"><a class="kalMinL" href="/predigten/veranstaltungskalender.php?kal_Aktion=detail&amp;kal_Nummer=134&amp;kal_Intervall=0&amp;kal_1F1=07.09.2014&amp;kal_Mini=2014-07" target="kalender" title="07.09.2014">&nbsp;7&nbsp;</a></td>
+ </tr>
+ <tr>
+  <td class="kalMinD">8</td>
+  <td class="kalMinD">9</td>
+  <td class="kalMinD">10</td>
+  <td class="kalMinD">11</td>
+  <td class="kalMinL"><a class="kalMinL" href="/predigten/veranstaltungskalender.php?kal_Aktion=detail&amp;kal_Nummer=128&amp;kal_Intervall=0&amp;kal_1F1=12.09.2014&amp;kal_Mini=2014-07" target="kalender" title="12.09.2014">12</a></td>
+  <td class="kalMinL"><a class="kalMinL" href="/predigten/veranstaltungskalender.php?kal_Intervall=0&amp;kal_1F1=13.09.2014&amp;kal_Mini=2014-07" target="kalender" title="13.09.2014, 
+13.09.2014, 
+13.09.2014">13</a></td>
+  <td class="kalMinL"><a class="kalMinL" href="/predigten/veranstaltungskalender.php?kal_Aktion=detail&amp;kal_Nummer=131&amp;kal_Intervall=0&amp;kal_1F1=14.09.2014&amp;kal_Mini=2014-07" target="kalender" title="14.09.2014">14</a></td>
+ </tr>
+ <tr>
+  <td class="kalMinD">15</td>
+  <td class="kalMinD">16</td>
+  <td class="kalMinD">17</td>
+  <td class="kalMinD">18</td>
+  <td class="kalMinD">19</td>
+  <td class="kalMinD">20</td>
+  <td class="kalMinD">21</td>
+ </tr>
+ <tr>
+  <td class="kalMinD">22</td>
+  <td class="kalMinD">23</td>
+  <td class="kalMinD">24</td>
+  <td class="kalMinD">25</td>
+  <td class="kalMinD">26</td>
+  <td class="kalMinL"><a class="kalMinL" href="/predigten/veranstaltungskalender.php?kal_Intervall=0&amp;kal_1F1=27.09.2014&amp;kal_Mini=2014-07" target="kalender" title="27.09.2014, 
+27.09.2014">27</a></td>
+  <td class="kalMinL"><a class="kalMinL" href="/predigten/veranstaltungskalender.php?kal_Aktion=detail&amp;kal_Nummer=182&amp;kal_Intervall=0&amp;kal_1F1=28.09.2014&amp;kal_Mini=2014-07" target="kalender" title="28.09.2014">28</a></td>
+ </tr>
+ <tr>
+  <td class="kalMinD">29</td>
+  <td class="kalMinD">30</td>
+  <td class="kalMinX">.</td>
+  <td class="kalMinX">.</td>
+  <td class="kalMinX">.</td>
+  <td class="kalMinX">.</td>
+  <td class="kalMinX">.</td>
+ </tr>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td class="kalBlnd" style="vertical-align:top;"><!-- MiniKalender 4.1 -->
+<div class="kalMini">
+<table class="kalMini" border="0" cellpadding="0" cellspacing="0">
+ <tr>
+  <td class="kalMinK"><a class="kalMinK" href="/predigten/veranstaltungskalender.php?kal_Mini=2014-06" title="Sept. 2014">&laquo;</a></td>
+  <td class="kalMinK" colspan="5"><a class="kalMinK" href="/predigten/veranstaltungskalender.php?kal_Intervall=0&amp;kal_1F1=01.10.2014&amp;kal_1F2=31.10.2014&amp;kal_Mini=2014-07" target="kalender">Okt. 2014</a></td>
+  <td class="kalMinK"><a class="kalMinK" href="/predigten/veranstaltungskalender.php?kal_Mini=2014-08" title="Nov. 2014">&raquo;</a></td>
+ </tr>
+ <tr>
+  <td class="kalMinK">Mo</td><td class="kalMinK">Di</td><td class="kalMinK">Mi</td><td class="kalMinK">Do</td><td class="kalMinK">Fr</td><td class="kalMinK">Sa</td><td class="kalMinK">So</td>
+ </tr>
+ <tr>
+  <td class="kalMinX">.</td>
+  <td class="kalMinX">.</td>
+  <td class="kalMinD">1</td>
+  <td class="kalMinD">2</td>
+  <td class="kalMinD">3</td>
+  <td class="kalMinD">4</td>
+  <td class="kalMinD">5</td>
+ </tr>
+ <tr>
+  <td class="kalMinD">6</td>
+  <td class="kalMinD">7</td>
+  <td class="kalMinD">8</td>
+  <td class="kalMinD">9</td>
+  <td class="kalMinD">10</td>
+  <td class="kalMinL"><a class="kalMinL" href="/predigten/veranstaltungskalender.php?kal_Intervall=0&amp;kal_1F1=11.10.2014&amp;kal_Mini=2014-07" target="kalender" title="11.10.2014, 
+11.10.2014">11</a></td>
+  <td class="kalMinL"><a class="kalMinL" href="/predigten/veranstaltungskalender.php?kal_Aktion=detail&amp;kal_Nummer=86&amp;kal_Intervall=0&amp;kal_1F1=12.10.2014&amp;kal_Mini=2014-07" target="kalender" title="12.10.2014">12</a></td>
+ </tr>
+ <tr>
+  <td class="kalMinD">13</td>
+  <td class="kalMinD">14</td>
+  <td class="kalMinD">15</td>
+  <td class="kalMinD">16</td>
+  <td class="kalMinD">17</td>
+  <td class="kalMinD">18</td>
+  <td class="kalMinD">19</td>
+ </tr>
+ <tr>
+  <td class="kalMinD">20</td>
+  <td class="kalMinD">21</td>
+  <td class="kalMinD">22</td>
+  <td class="kalMinD">23</td>
+  <td class="kalMinD">24</td>
+  <td class="kalMinD">25</td>
+  <td class="kalMinD">26</td>
+ </tr>
+ <tr>
+  <td class="kalMinD">27</td>
+  <td class="kalMinD">28</td>
+  <td class="kalMinD">29</td>
+  <td class="kalMinD">30</td>
+  <td class="kalMinD">31</td>
+  <td class="kalMinX">.</td>
+  <td class="kalMinX">.</td>
+ </tr>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td class="kalBlnd" style="vertical-align:top;"><!-- MiniKalender 5.1 -->
+<div class="kalMini">
+<table class="kalMini" border="0" cellpadding="0" cellspacing="0">
+ <tr>
+  <td class="kalMinK"><a class="kalMinK" href="/predigten/veranstaltungskalender.php?kal_Mini=2014-06" title="Okt. 2014">&laquo;</a></td>
+  <td class="kalMinK" colspan="5"><a class="kalMinK" href="/predigten/veranstaltungskalender.php?kal_Intervall=0&amp;kal_1F1=01.11.2014&amp;kal_1F2=30.11.2014&amp;kal_Mini=2014-07" target="kalender">Nov. 2014</a></td>
+  <td class="kalMinK"><a class="kalMinK" href="/predigten/veranstaltungskalender.php?kal_Mini=2014-08" title="Dez. 2014">&raquo;</a></td>
+ </tr>
+ <tr>
+  <td class="kalMinK">Mo</td><td class="kalMinK">Di</td><td class="kalMinK">Mi</td><td class="kalMinK">Do</td><td class="kalMinK">Fr</td><td class="kalMinK">Sa</td><td class="kalMinK">So</td>
+ </tr>
+ <tr>
+  <td class="kalMinX">.</td>
+  <td class="kalMinX">.</td>
+  <td class="kalMinX">.</td>
+  <td class="kalMinX">.</td>
+  <td class="kalMinX">.</td>
+  <td class="kalMinL"><a class="kalMinL" href="/predigten/veranstaltungskalender.php?kal_Intervall=0&amp;kal_1F1=01.11.2014&amp;kal_Mini=2014-07" target="kalender" title="01.11.2014, 
+01.11.2014">&nbsp;1&nbsp;</a></td>
+  <td class="kalMinL"><a class="kalMinL" href="/predigten/veranstaltungskalender.php?kal_Aktion=detail&amp;kal_Nummer=177&amp;kal_Intervall=0&amp;kal_1F1=02.11.2014&amp;kal_Mini=2014-07" target="kalender" title="02.11.2014">&nbsp;2&nbsp;</a></td>
+ </tr>
+ <tr>
+  <td class="kalMinD">3</td>
+  <td class="kalMinD">4</td>
+  <td class="kalMinD">5</td>
+  <td class="kalMinD">6</td>
+  <td class="kalMinD">7</td>
+  <td class="kalMinL"><a class="kalMinL" href="/predigten/veranstaltungskalender.php?kal_Intervall=0&amp;kal_1F1=08.11.2014&amp;kal_Mini=2014-07" target="kalender" title="08.11.2014, 
+08.11.2014">&nbsp;8&nbsp;</a></td>
+  <td class="kalMinL"><a class="kalMinL" href="/predigten/veranstaltungskalender.php?kal_Aktion=detail&amp;kal_Nummer=148&amp;kal_Intervall=0&amp;kal_1F1=09.11.2014&amp;kal_Mini=2014-07" target="kalender" title="09.11.2014">&nbsp;9&nbsp;</a></td>
+ </tr>
+ <tr>
+  <td class="kalMinD">10</td>
+  <td class="kalMinD">11</td>
+  <td class="kalMinD">12</td>
+  <td class="kalMinD">13</td>
+  <td class="kalMinD">14</td>
+  <td class="kalMinL"><a class="kalMinL" href="/predigten/veranstaltungskalender.php?kal_Intervall=0&amp;kal_1F1=15.11.2014&amp;kal_Mini=2014-07" target="kalender" title="15.11.2014, 
+15.11.2014">15</a></td>
+  <td class="kalMinL"><a class="kalMinL" href="/predigten/veranstaltungskalender.php?kal_Aktion=detail&amp;kal_Nummer=105&amp;kal_Intervall=0&amp;kal_1F1=16.11.2014&amp;kal_Mini=2014-07" target="kalender" title="16.11.2014">16</a></td>
+ </tr>
+ <tr>
+  <td class="kalMinD">17</td>
+  <td class="kalMinD">18</td>
+  <td class="kalMinD">19</td>
+  <td class="kalMinD">20</td>
+  <td class="kalMinD">21</td>
+  <td class="kalMinL"><a class="kalMinL" href="/predigten/veranstaltungskalender.php?kal_Intervall=0&amp;kal_1F1=22.11.2014&amp;kal_Mini=2014-07" target="kalender" title="22.11.2014, 
+22.11.2014">22</a></td>
+  <td class="kalMinL"><a class="kalMinL" href="/predigten/veranstaltungskalender.php?kal_Aktion=detail&amp;kal_Nummer=185&amp;kal_Intervall=0&amp;kal_1F1=23.11.2014&amp;kal_Mini=2014-07" target="kalender" title="23.11.2014">23</a></td>
+ </tr>
+ <tr>
+  <td class="kalMinD">24</td>
+  <td class="kalMinD">25</td>
+  <td class="kalMinD">26</td>
+  <td class="kalMinD">27</td>
+  <td class="kalMinD">28</td>
+  <td class="kalMinL"><a class="kalMinL" href="/predigten/veranstaltungskalender.php?kal_Intervall=0&amp;kal_1F1=29.11.2014&amp;kal_Mini=2014-07" target="kalender" title="29.11.2014, 
+29.11.2014">29</a></td>
+  <td class="kalMinL"><a class="kalMinL" href="/predigten/veranstaltungskalender.php?kal_Aktion=detail&amp;kal_Nummer=195&amp;kal_Intervall=0&amp;kal_1F1=30.11.2014&amp;kal_Mini=2014-07" target="kalender" title="30.11.2014">30</a></td>
+ </tr>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td class="kalBlnd" style="vertical-align:top;"><!-- MiniKalender 6.1 -->
+<div class="kalMini">
+<table class="kalMini" border="0" cellpadding="0" cellspacing="0">
+ <tr>
+  <td class="kalMinK"><a class="kalMinK" href="/predigten/veranstaltungskalender.php?kal_Mini=2014-06" title="Nov. 2014">&laquo;</a></td>
+  <td class="kalMinK" colspan="5"><a class="kalMinK" href="/predigten/veranstaltungskalender.php?kal_Intervall=0&amp;kal_1F1=01.12.2014&amp;kal_1F2=31.12.2014&amp;kal_Mini=2014-07" target="kalender">Dez. 2014</a></td>
+  <td class="kalMinK"><a class="kalMinK" href="/predigten/veranstaltungskalender.php?kal_Mini=2014-08" title="Jan. 2015">&raquo;</a></td>
+ </tr>
+ <tr>
+  <td class="kalMinK">Mo</td><td class="kalMinK">Di</td><td class="kalMinK">Mi</td><td class="kalMinK">Do</td><td class="kalMinK">Fr</td><td class="kalMinK">Sa</td><td class="kalMinK">So</td>
+ </tr>
+ <tr>
+  <td class="kalMinD">1</td>
+  <td class="kalMinD">2</td>
+  <td class="kalMinD">3</td>
+  <td class="kalMinD">4</td>
+  <td class="kalMinD">5</td>
+  <td class="kalMinL"><a class="kalMinL" href="/predigten/veranstaltungskalender.php?kal_Intervall=0&amp;kal_1F1=06.12.2014&amp;kal_Mini=2014-07" target="kalender" title="06.12.2014, 
+06.12.2014">&nbsp;6&nbsp;</a></td>
+  <td class="kalMinL"><a class="kalMinL" href="/predigten/veranstaltungskalender.php?kal_Aktion=detail&amp;kal_Nummer=152&amp;kal_Intervall=0&amp;kal_1F1=07.12.2014&amp;kal_Mini=2014-07" target="kalender" title="07.12.2014">&nbsp;7&nbsp;</a></td>
+ </tr>
+ <tr>
+  <td class="kalMinD">8</td>
+  <td class="kalMinD">9</td>
+  <td class="kalMinD">10</td>
+  <td class="kalMinD">11</td>
+  <td class="kalMinD">12</td>
+  <td class="kalMinD">13</td>
+  <td class="kalMinD">14</td>
+ </tr>
+ <tr>
+  <td class="kalMinD">15</td>
+  <td class="kalMinD">16</td>
+  <td class="kalMinD">17</td>
+  <td class="kalMinD">18</td>
+  <td class="kalMinD">19</td>
+  <td class="kalMinD">20</td>
+  <td class="kalMinD">21</td>
+ </tr>
+ <tr>
+  <td class="kalMinD">22</td>
+  <td class="kalMinD">23</td>
+  <td class="kalMinD">24</td>
+  <td class="kalMinD">25</td>
+  <td class="kalMinD">26</td>
+  <td class="kalMinD">27</td>
+  <td class="kalMinD">28</td>
+ </tr>
+ <tr>
+  <td class="kalMinD">29</td>
+  <td class="kalMinD">30</td>
+  <td class="kalMinD">31</td>
+  <td class="kalMinX">.</td>
+  <td class="kalMinX">.</td>
+  <td class="kalMinX">.</td>
+  <td class="kalMinX">.</td>
+ </tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+
+</div>
+
+	</div>
+</div>
+
+</div>
+</td></tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,187 @@
+{
+  "type": "FeatureCollection",
+  "generator": "None...",
+  "timestamp": "2014-07-02T08:03:01Z",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "1",
+      "properties": {
+        "name": "CGO Christliche Gemeinde im Oberaargau",
+        "prevented": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.70250,
+          47.19194
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "2",
+      "properties": {
+        "name": "pentahotel Gera",
+        "prevented": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.07035,
+          50.88392
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "3",
+      "properties": {
+        "name": "Musikschule des Landkreises Oldenburg",
+        "prevented": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.43801,
+          52.89584
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "4",
+      "properties": {
+        "name": "FCG Freiburg",
+        "prevented": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.79526,
+          48.02418
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "4",
+      "properties": {
+        "name": "ICF Freiburg Breisgau, Cinemaxx",
+        "prevented": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.84400,
+          47.99558
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "4",
+      "properties": {
+        "name": "Gesundheitszentrum Gwatt",
+        "prevented": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.63334,
+          46.71939
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "4",
+      "properties": {
+        "name": "FEG ' Neues Land Emmental'",
+        "prevented": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.72361,
+          47.00834
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "4",
+      "properties": {
+        "name": "Stadttheater Olten",
+        "prevented": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.90447,
+          47.35199
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "4",
+      "properties": {
+        "name": "Friedensgemeinde Norden",
+        "prevented": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.23269,
+          53.59781
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "4",
+      "properties": {
+        "name": "FCG 'Christen im Alltag'",
+        "prevented": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.89924,
+          47.47056
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "4",
+      "properties": {
+        "name": "Lagerhauskirche Kaiserslautern",
+        "prevented": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.77550,
+          49.44086
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "4",
+      "properties": {
+        "name": "Freikirchliche Gemeinde Schwäbisch-Hall",
+        "prevented": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.76526,
+          49.09707
+        ]
+      }
+    }
+  ]
+}
