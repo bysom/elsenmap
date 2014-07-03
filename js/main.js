@@ -2,12 +2,17 @@ var map = L.map('map').setView([50.5, 10], 6);
 var kalData = []
 var places = []
 var now = new Date()
+var aufsUrheberrechtScheissen = false
+var cElsen = ""
 
+if (aufsUrheberrechtScheissen)
+	cElsen = 'Veranstaltungsinfos sind von der Website von <a target="_blank" href="http://www.dr-elsen-veranstaltung.de/predigten/veranstaltungskalender.php?kal_Start=1">Dr. Arne Elsen</a>'
 L.tileLayer('http://otile1.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.jpg', {
 	maxZoom: 18,
 	attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
 		'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-		'Imagery © <a href="http://mapquest.com">MapQuest</a>'
+		'Imagery © <a href="http://mapquest.com">MapQuest</a>, ' + cElsen
+		
 }).addTo(map);
 
 //Die Adressen von Elsen sind etwas schräg formattiert
@@ -28,23 +33,29 @@ function onEachFeature(feature, layer) {
 	var popupContent = "<h4>" +
 			feature.properties.name + "</h4>";
 	if(feature.properties.dates){
-		popupContent += "<dl><dt>Start:</dt><dd>"+feature.properties.minstart.toLocaleString()+"</dd><dt>Frühestes Ende:</dt><dd>"+feature.properties.maxend.toLocaleString()+"</dt></dl>"
+		popupContent += "<dl>"
+		if (aufsUrheberrechtScheissen) {
+			popupContent += "<dt>Start:</dt><dd>"+feature.properties.minstart.toLocaleString()+"</dd><dt>Frühestes Ende:</dt><dd>"+feature.properties.maxend.toLocaleString()+"</dt>"
+		};
+		popupContent += "</dl>"
 
-		//Die Veranstaltungen
-		popupContent += "<div class=\"table-responsive\"><table class=\"table\">"
-		for (var i = 0; i < feature.properties.dates.length; i++) {
-			var end = "";
-			if (feature.properties.dates[i].end) {
-				end = " bis "+feature.properties.dates[i].end.toLocaleTimeString()
+		if(aufsUrheberrechtScheissen){
+			//Die Veranstaltungen
+			popupContent += "<div class=\"table-responsive\"><table class=\"table\">"
+			for (var i = 0; i < feature.properties.dates.length; i++) {
+				var end = "";
+				if (feature.properties.dates[i].end) {
+					end = " bis "+feature.properties.dates[i].end.toLocaleTimeString()
+				};
+				popupContent += "<tr><td>"+feature.properties.dates[i].start.toLocaleDateString()+"</td><td>"+feature.properties.dates[i].start.toLocaleTimeString()+end+"</td><td>"+feature.properties.dates[i].type+"</td></tr>"
 			};
-			popupContent += "<tr><td>"+feature.properties.dates[i].start.toLocaleDateString()+"</td><td>"+feature.properties.dates[i].start.toLocaleTimeString()+end+"</td><td>"+feature.properties.dates[i].type+"</td></tr>"
-		};
-		popupContent += "</table></div>"
+			popupContent += "</table></div>"
 
-		popupContent += "<address>"+repairElsensAdresses(feature.properties.dates[0].place)+"</address>"
-		if (feature.properties.dates[0].desc && feature.properties.dates[0].desc != "&nbsp;") {
-			popupContent += "<p class=\"text-muted\"><em>"+feature.properties.dates[0].desc+"</em></p>"
-		};
+			popupContent += "<address>"+repairElsensAdresses(feature.properties.dates[0].place)+"</address>"
+			if (feature.properties.dates[0].desc && feature.properties.dates[0].desc != "&nbsp;") {
+				popupContent += "<p class=\"text-muted\"><em>"+feature.properties.dates[0].desc+"</em></p>"
+			};
+		}
 	}
 
 
