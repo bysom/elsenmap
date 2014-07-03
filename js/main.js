@@ -15,9 +15,6 @@ function onEachFeature(feature, layer) {
 			feature.properties.name + "</p>";
 	// popupContent += "<p>" +
 	// 		feature.properties.dates[0].start.toLocaleString() + "</p>";
-	// if (feature.properties && feature.properties.popupContent) {
-	// 	popupContent += feature.properties.popupContent;
-	// }
 
 	layer.bindPopup(popupContent);
 }
@@ -40,46 +37,46 @@ function buildTime(day, month, year, time){
 
 }
 
+// Veranstaltungsobjekt
+function getEventObj(row){
+	var hash = md5(row[0])
+	var placehash = md5(row[6])
+	return {
+		start: buildTime(row[1],row[2],row[3],row[4])
+		, end: buildTime(row[1],row[2],row[3],row[5])
+		, place: row[6]
+		, type: row[7]
+		, desc: row[8]
+		, hash: hash
+		, placehash: placehash
+	}
+}
+
 // Die Geodaten laden
 $.getJSON( "data/standorte.geojson", function( data ) {
 	places = data.features
 	kalData = []
 	var re = /<tr>\n[ ]*<td class="kal[\w]+"[\w ="\-:;><\/.?&]+">([\d]{1,2}).([\d]{1,2}).([\d]{2,4})[\w&;<>\/]+\n[ ]*<td class="kal[\w]+"[\w ="\-:;><\/.?&]+">([\w:&;]*)<\/td>\n[ ]*<td class="kal[\w]+"[\w ="\-:;><\/.?&]+>([\w:&;]*)<\/td>\n[ ]*<td class="kal[\w]+"[\w ="\-:;><\/.?&]+>([\w:&;., \-äöüÄÖÜß\/<>@+\(\)'=]*)<\/td>\n[ ]*<td class="kal[\w]+"[\w ="\-:;><\/.?&]+>([\w:&;., \-äöüÄÖÜß\/<>@+\(\)'=]*)<\/td>\n[ ]*<td class="kal[\w]+"[\w ="\-:;><\/.?&]+>([\w:&;., \-äöüÄÖÜß\/<>@+\(\)?'"=]*)<\/td>\n/gi;
 	$.get('data/kalender.html', function(data2) {
+		//Geodaten um Veranstaltungen erweitern
 	    while(row = re.exec(data2)){
-	    	var hash = md5(row[0])
+	    	var cvent = getEventObj(row)
 	    	var placehash = md5(row[6])
-	    	kalData.push({
-	    		start: buildTime(row[1],row[2],row[3],row[4])
-	    		, end: buildTime(row[1],row[2],row[3],row[5])
-	    		, place: row[6]
-	    		, type: row[7]
-	    		, desc: row[8]
-	    		, hash: hash
-	    		, placehash: placehash
-	    	})
+	    	kalData.push(cvent)
 	    	for (var i = 0; i < places.length; i++) {
 	    		if(places[i].properties.hashes.indexOf(placehash) >= 0){
 	    			if(places[i].properties.dates == null){
 	    				places[i].properties.dates = []
 	    			}
-	    			places[i].properties.dates.push({
-	    				start: buildTime(row[1],row[2],row[3],row[4])
-			    		, end: buildTime(row[1],row[2],row[3],row[5])
-			    		, place: row[6]
-			    		, type: row[7]
-			    		, desc: row[8]
-			    		, hash: hash
-			    		, placehash: placehash
-	    			})
+	    			places[i].properties.dates.push(cvent)
 	    		}
 	    	};
 	    }
 	    //Jetzt die Geodaten in die Karte packen
 	    L.geoJson(data, {
-			style: function (feature) {
-				return feature.properties && feature.properties.style;
-			},
+			// style: function (feature) {
+			// 	return feature.properties && feature.properties.style;
+			// },
 
 			onEachFeature: onEachFeature,
 
