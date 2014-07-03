@@ -5,8 +5,10 @@ var now = new Date()
 var aufsUrheberrechtScheissen = false
 var cElsen = ""
 
-if (aufsUrheberrechtScheissen)
+if (aufsUrheberrechtScheissen){
 	cElsen = 'Veranstaltungsinfos sind von der Website von <a target="_blank" href="http://www.dr-elsen-veranstaltung.de/predigten/veranstaltungskalender.php?kal_Start=1">Dr. Arne Elsen</a>'
+	$("#crbla").html(" Die Informationen bezieht die Karte aus den von Dr. Arne Elsen <a href=\"http://www.dr-elsen-veranstaltung.de/predigten/veranstaltungskalender.php?kal_Start=1\" target=\"_blank\">veröffentlichten</a> Veranstaltungsterminen auf seiner Website.")
+}
 L.tileLayer('http://otile1.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.jpg', {
 	maxZoom: 18,
 	attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
