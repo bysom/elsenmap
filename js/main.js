@@ -1,6 +1,7 @@
 var map = L.map('map').setView([50.5, 10], 6);
 var kalData = []
 var places = []
+var now = new Date()
 
 L.tileLayer('http://otile1.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.jpg', {
 	maxZoom: 18,
@@ -27,13 +28,28 @@ function onEachFeature(feature, layer) {
 	var popupContent = "<h4>" +
 			feature.properties.name + "</h4>";
 	if(feature.properties.dates){
-		popupContent += "<adresse>"+repairElsensAdresses(feature.properties.dates[0].place)+"</adresse>"
+		popupContent += "<dl><dt>Start:</dt><dd>"+feature.properties.minstart.toLocaleString()+"</dd><dt>Frühestes Ende:</dt><dd>"+feature.properties.maxend.toLocaleString()+"</dt></dl>"
 
+		//Die Veranstaltungen
+		popupContent += "<div class=\"table-responsive\"><table class=\"table\">"
+		for (var i = 0; i < feature.properties.dates.length; i++) {
+			var end = "";
+			if (feature.properties.dates[i].end) {
+				end = " bis "+feature.properties.dates[i].end.toLocaleTimeString()
+			};
+			popupContent += "<tr><td>"+feature.properties.dates[i].start.toLocaleDateString()+"</td><td>"+feature.properties.dates[i].start.toLocaleTimeString()+end+"</td><td>"+feature.properties.dates[i].type+"</td></tr>"
+		};
+		popupContent += "</table></div>"
+
+		popupContent += "<address>"+repairElsensAdresses(feature.properties.dates[0].place)+"</address>"
+		if (feature.properties.dates[0].desc && feature.properties.dates[0].desc != "&nbsp;") {
+			popupContent += "<p class=\"text-muted\"><em>"+feature.properties.dates[0].desc+"</em></p>"
+		};
 	}
+
 
 	// popupContent += "<p>" +
 	// 		feature.properties.dates[0].start.toLocaleString() + "</p>";
-	console.log("ffffft")
 	layer.bindPopup(popupContent);
 }
 
@@ -85,7 +101,6 @@ $.getJSON( "data/standorte.geojson", function( data ) {
 	    while(row = re.exec(data2)){
 	    	var cvent = getEventObj(row)
 	    	var placehash = md5(row[6])
-	    	console.log(row[6])
 	    	kalData.push(cvent)
 	    	for (var i = 0; i < places.length; i++) {
 	    		if(places[i].properties.hashes.indexOf(placehash) >= 0){
@@ -93,11 +108,27 @@ $.getJSON( "data/standorte.geojson", function( data ) {
 	    				places[i].properties.dates = []
 	    			}
 	    			places[i].properties.dates.push(cvent)
+
+	    			//Anfang + Ender aller Veranstaltungen dort
+	    			if(places[i].properties.minstart == null || places[i].properties.minstart > buildTime(row[1],row[2],row[3],row[4]))
+    					places[i].properties.minstart = buildTime(row[1],row[2],row[3],row[4])
+
+    				var end = buildTime(row[1],row[2],row[3],row[5])
+    				var bigger = (places[i].properties.maxend == null || places[i].properties.maxend < end)
+					if(end){
+						if (bigger){
+							places[i].properties.maxend = end
+						}
+					}
+					else{
+						if (bigger){
+							places[i].properties.maxend = buildTime(row[1],row[2],row[3],row[4])
+						}
+					}
 	    		}
 	    	};
 	    }
 	    //Jetzt die Geodaten in die Karte packen
-	    console.log("pfrrt")
 	    L.geoJson(data, {
 			// style: function (feature) {
 			// 	return feature.properties && feature.properties.style;
