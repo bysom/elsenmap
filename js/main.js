@@ -39,7 +39,7 @@ function onEachFeature(feature, layer) {
 		if (aufsUrheberrechtScheissen) {
 			popupContent += "<dt>Start:</dt><dd>"+feature.properties.minstart.toLocaleString()+"</dd><dt>Frühestes Ende:</dt><dd>"+feature.properties.maxend.toLocaleString()+"</dt>"
 		};
-		popupContent += "</dl>"
+		popupContent += "<dt>Verbleibend:</dt><dd>"+feature.properties.left+" Tage</dd></dl>"
 
 		if(aufsUrheberrechtScheissen){
 			//Die Veranstaltungen
@@ -64,6 +64,9 @@ function onEachFeature(feature, layer) {
 	// popupContent += "<p>" +
 	// 		feature.properties.dates[0].start.toLocaleString() + "</p>";
 	layer.bindPopup(popupContent);
+	var labeltext = labelText(feature.properties.left)
+	if(labeltext)
+		layer.bindLabel(labeltext, { noHide: true })
 }
 
 function getColor(prevented){
@@ -99,6 +102,18 @@ function getEventObj(row){
 	}
 }
 
+function labelText(left){
+	if(left > 0){
+		if(left <= 1)
+			return "<strong>keine 24h mehr!</strong>"
+		else if(left < 60){
+			return "Noch "+left+" Tage"
+		}
+		else
+			return false
+	}
+}
+
 // Die Geodaten laden
 $.getJSON( "data/standorte.geojson", function( data ) {
 	places = data.features
@@ -123,8 +138,10 @@ $.getJSON( "data/standorte.geojson", function( data ) {
 	    			places[i].properties.dates.push(cvent)
 
 	    			//Anfang + Ender aller Veranstaltungen dort
-	    			if(places[i].properties.minstart == null || places[i].properties.minstart > buildTime(row[1],row[2],row[3],row[4]))
+	    			if(places[i].properties.minstart == null || places[i].properties.minstart > buildTime(row[1],row[2],row[3],row[4])){
     					places[i].properties.minstart = buildTime(row[1],row[2],row[3],row[4])
+    					places[i].properties.left = Math.round((places[i].properties.minstart-now)/(1000*60*60*24)+0.5)
+	    			}
 
     				var end = buildTime(row[1],row[2],row[3],row[5])
     				var bigger = (places[i].properties.maxend == null || places[i].properties.maxend < end)
@@ -159,7 +176,8 @@ $.getJSON( "data/standorte.geojson", function( data ) {
 					fillOpacity: 0.8
 				});
 			}
-		}).addTo(map);
+		})
+			.addTo(map);
 
 	});
 	

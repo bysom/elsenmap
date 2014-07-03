@@ -20,3 +20,6 @@ html, body{
 .modal-dialog{
 	margin:80px auto;
 }
+.leaflet-popup{
+	z-index: 7000;
+}
