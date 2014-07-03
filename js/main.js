@@ -15,7 +15,7 @@ function onEachFeature(feature, layer) {
 			feature.properties.name + "</p>";
 	// popupContent += "<p>" +
 	// 		feature.properties.dates[0].start.toLocaleString() + "</p>";
-
+	console.log("ffffft")
 	layer.bindPopup(popupContent);
 }
 
@@ -73,6 +73,7 @@ $.getJSON( "data/standorte.geojson", function( data ) {
 	    	};
 	    }
 	    //Jetzt die Geodaten in die Karte packen
+	    console.log("pfrrt")
 	    L.geoJson(data, {
 			// style: function (feature) {
 			// 	return feature.properties && feature.properties.style;
