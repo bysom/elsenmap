@@ -75,7 +75,12 @@ $.getJSON( "data/standorte.geojson", function( data ) {
 	places = data.features
 	kalData = []
 	var re = /<tr>\n[ ]*<td class="kal[\w]+"[\w ="\-:;><\/.?&]+">([\d]{1,2}).([\d]{1,2}).([\d]{2,4})[\w&;<>\/]+\n[ ]*<td class="kal[\w]+"[\w ="\-:;><\/.?&]+">([\w:&;]*)<\/td>\n[ ]*<td class="kal[\w]+"[\w ="\-:;><\/.?&]+>([\w:&;]*)<\/td>\n[ ]*<td class="kal[\w]+"[\w ="\-:;><\/.?&]+>([\w:&;., \-äöüÄÖÜß\/<>@+\(\)'=]*)<\/td>\n[ ]*<td class="kal[\w]+"[\w ="\-:;><\/.?&]+>([\w:&;., \-äöüÄÖÜß\/<>@+\(\)'=]*)<\/td>\n[ ]*<td class="kal[\w]+"[\w ="\-:;><\/.?&]+>([\w:&;., \-äöüÄÖÜß\/<>@+\(\)?'"=]*)<\/td>\n/gi;
-	$.get('data/kalender.html', function(data2) {
+	$.ajax({
+		url: 'data/kalender.html'
+		, beforeSend: function(jqXHR) {
+	        jqXHR.overrideMimeType('text/html;charset=iso-8859-1');
+	    }
+	}).done(function(data2) {
 		//Geodaten um Veranstaltungen erweitern
 	    while(row = re.exec(data2)){
 	    	var cvent = getEventObj(row)
