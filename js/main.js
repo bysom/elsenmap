@@ -13,11 +13,11 @@ L.tileLayer('http://otile1.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.jpg', {
 function onEachFeature(feature, layer) {
 	var popupContent = "<p>" +
 			feature.properties.name + "</p>";
-	popupContent += "<p>" +
-			feature.properties.dates[0].start.toLocaleString() + "</p>";
-	if (feature.properties && feature.properties.popupContent) {
-		popupContent += feature.properties.popupContent;
-	}
+	// popupContent += "<p>" +
+	// 		feature.properties.dates[0].start.toLocaleString() + "</p>";
+	// if (feature.properties && feature.properties.popupContent) {
+	// 	popupContent += feature.properties.popupContent;
+	// }
 
 	layer.bindPopup(popupContent);
 }
