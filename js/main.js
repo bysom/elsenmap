@@ -9,10 +9,28 @@ L.tileLayer('http://otile1.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.jpg', {
 		'Imagery © <a href="http://mapquest.com">MapQuest</a>'
 }).addTo(map);
 
+//Die Adressen von Elsen sind etwas schräg formattiert
+function repairElsensAdresses(murks){
+	var str = murks.split(",")
+	re = /[\d]+/
+	for (var i = 0; i < str.length; i++) {
+		str[i] = str[i].trim()
+		//Wenn keine Zahl in der ersten Adress-Zeile, mache die erste Zeile fett
+		if (i == 0 && !re.test(str[i])){
+			str[i] = "<strong>"+str[i]+"</strong>"
+		}
+	};
+	return str.join("<br>")
+}
 
 function onEachFeature(feature, layer) {
-	var popupContent = "<p>" +
-			feature.properties.name + "</p>";
+	var popupContent = "<h4>" +
+			feature.properties.name + "</h4>";
+	if(feature.properties.dates){
+		popupContent += "<adresse>"+repairElsensAdresses(feature.properties.dates[0].place)+"</adresse>"
+
+	}
+
 	// popupContent += "<p>" +
 	// 		feature.properties.dates[0].start.toLocaleString() + "</p>";
 	console.log("ffffft")
@@ -62,6 +80,7 @@ $.getJSON( "data/standorte.geojson", function( data ) {
 	    while(row = re.exec(data2)){
 	    	var cvent = getEventObj(row)
 	    	var placehash = md5(row[6])
+	    	console.log(row[6])
 	    	kalData.push(cvent)
 	    	for (var i = 0; i < places.length; i++) {
 	    		if(places[i].properties.hashes.indexOf(placehash) >= 0){
