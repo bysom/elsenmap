@@ -8,7 +8,8 @@
       "id": "1",
       "properties": {
         "name": "CGO Christliche Gemeinde im Oberaargau",
-        "prevented": false
+        "prevented": false,
+        "hashes": ["5296ab04ff9a85f1d90b178a98fcd7de"] 
       },
       "geometry": {
         "type": "Point",
@@ -23,7 +24,8 @@
       "id": "2",
       "properties": {
         "name": "pentahotel Gera",
-        "prevented": false
+        "prevented": false,
+        "hashes": ["1686b9eb8bbb2a442a46fcebd8cc0a9c"] 
       },
       "geometry": {
         "type": "Point",
@@ -38,7 +40,8 @@
       "id": "3",
       "properties": {
         "name": "Musikschule des Landkreises Oldenburg",
-        "prevented": true
+        "prevented": true,
+        "hashes": ["81aff2d3e2b0e7544cad510bb01f5dc3"]
       },
       "geometry": {
         "type": "Point",
@@ -53,7 +56,8 @@
       "id": "4",
       "properties": {
         "name": "FCG Freiburg",
-        "prevented": false
+        "prevented": false,
+        "hashes": ["faafddad9ee9c58be71e93edbf244f59", "ae4fef462dbdf4ada540af90fb92a997"]
       },
       "geometry": {
         "type": "Point",
@@ -68,7 +72,8 @@
       "id": "5",
       "properties": {
         "name": "ICF Freiburg Breisgau, Cinemaxx",
-        "prevented": false
+        "prevented": false,
+        "hashes": ["66d90a208ee10586a8ccc4168d6cc608"]
       },
       "geometry": {
         "type": "Point",
@@ -83,7 +88,8 @@
       "id": "6",
       "properties": {
         "name": "Gesundheitszentrum Gwatt",
-        "prevented": false
+        "prevented": false,
+        "hashes": ["6c138123314e76660b5ee9dc1aeac236"]
       },
       "geometry": {
         "type": "Point",
@@ -98,7 +104,8 @@
       "id": "7",
       "properties": {
         "name": "FEG ' Neues Land Emmental'",
-        "prevented": false
+        "prevented": false,
+        "hashes": ["1734a961ee8d7d5a1fd9485ce957a44c"]
       },
       "geometry": {
         "type": "Point",
@@ -113,7 +120,8 @@
       "id": "8",
       "properties": {
         "name": "Stadttheater Olten",
-        "prevented": false
+        "prevented": false,
+        "hashes": ["b321a56378b6092d705c56f57113c679", "10a5089debe758e9aef02ce975caea49"]
       },
       "geometry": {
         "type": "Point",
@@ -128,7 +136,8 @@
       "id": "9",
       "properties": {
         "name": "Friedensgemeinde Norden",
-        "prevented": false
+        "prevented": false,
+        "hashes": ["ee61ad3798f25ad43b9b84ff24c89c01"]
       },
       "geometry": {
         "type": "Point",
@@ -143,7 +152,8 @@
       "id": "10",
       "properties": {
         "name": "FCG 'Christen im Alltag'",
-        "prevented": false
+        "prevented": false,
+        "hashes": ["b5d02868f61af06bc80bb5b51cbd0bca", "2bbc85b874d209989da0c74a1499a914"]
       },
       "geometry": {
         "type": "Point",
@@ -158,7 +168,8 @@
       "id": "11",
       "properties": {
         "name": "Lagerhauskirche Kaiserslautern",
-        "prevented": false
+        "prevented": false,
+        "hashes": ["e6a9e8d349c0a42b4ab070f371c39503"]
       },
       "geometry": {
         "type": "Point",
@@ -173,13 +184,238 @@
       "id": "12",
       "properties": {
         "name": "Freikirchliche Gemeinde Schwäbisch-Hall",
-        "prevented": false
+        "prevented": false,
+        "hashes": ["45869610c5e8e937d5c740c28820d402"]
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
           9.76526,
           49.09707
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "13",
+      "properties": {
+        "name": "Volksmission Familienkirche Weikersheim",
+        "prevented": false,
+        "hashes": ["dbc2587046e9683aef143a9d9ffb48ab", "7f4f43d90f7c116222b1511867cb6a5e"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.90699,
+          49.47858
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "14",
+      "properties": {
+        "name": "Volksmission Ansbach",
+        "prevented": false,
+        "hashes": ["8c4981c3c54e9c61ddc4015a9ad8c110"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.56895,
+          49.29649
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "15",
+      "properties": {
+        "name": "Evang. Kirchengemeinde Ziegelhausen",
+        "prevented": false,
+        "hashes": ["9bebee63cb92ab384af48df5fab81b1e"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.75226,
+          49.42401
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "16",
+      "properties": {
+        "name": "Freikirche der Siebenten-Tags-Adventisten",
+        "prevented": false,
+        "hashes": ["3eea7f354d81f703597c3bcecfa16428"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.68833,
+          49.37416
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "17",
+      "properties": {
+        "name": "Hotel Seeblick",
+        "prevented": false,
+        "hashes": ["0f8196d7efef7282cb92a100d9cd4078"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.52096,
+          46.95923
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "18",
+      "properties": {
+        "name": "Gemeinde der offenen Tür e.V.",
+        "prevented": false,
+        "hashes": ["840fe54dfeb8bf0a47719039a266cbb9"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.72434,
+          48.54223
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "19",
+      "properties": {
+        "name": "FCG St.Pölten, Volkshaus Spratzen",
+        "prevented": false,
+        "hashes": ["7fd8ebd8eb7e1d59878ca7bf4560ec57"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.62092,
+          48.16982
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "20",
+      "properties": {
+        "name": "FCG St.Pölten, wird noch geplant",
+        "prevented": false,
+        "hashes": ["a4b740cbe004c65f1fd7fc21560527c8"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.62193,
+          48.21100
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "21",
+      "properties": {
+        "name": "Heilungsräume Ravensburg e.V.",
+        "prevented": false,
+        "hashes": ["73ef97ec2578189d995a69eae195008c", "a71277fb4fc8c9cf739045a3ed65549e"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.59973,
+          47.77301
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "22",
+      "properties": {
+        "name": "Ecclesia- Gemeinde Neumarkt",
+        "prevented": false,
+        "hashes": ["3f64037d0911d60de29a9de3f25d3f6a", "f3700108c801e329dd3b24c36d352646"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.47477,
+          49.26083
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "23",
+      "properties": {
+        "name": "Gospel Center Brugg",
+        "prevented": false,
+        "hashes": ["1bdcc18786b2e3908763ab16b34fffc7"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.20028,
+          47.47428
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "24",
+      "properties": {
+        "name": "Christus-Zentrum Weinstadt e. V.",
+        "prevented": false,
+        "hashes": ["951ddb3c542367afdb115122b3215af0", "365aced8a25d4a0441a7b7aea4f428b3"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.39376,
+          48.81066
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "25",
+      "properties": {
+        "name": "Christliches Zentrum Hannover",
+        "prevented": false,
+        "hashes": ["7d6f413022fe6817e20db6b12f442a8c"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.72926,
+          52.37856
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "26",
+      "properties": {
+        "name": "FCG Weißenburg",
+        "prevented": false,
+        "hashes": ["3d1da7cc8378d3ba9edfd9eb0636e059"]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.97459,
+          49.03475
         ]
       }
     }
