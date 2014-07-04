@@ -6,14 +6,15 @@ var aufsUrheberrechtScheissen = false
 var cElsen = ""
 
 if (aufsUrheberrechtScheissen){
-	cElsen = 'Veranstaltungsinfos sind von der Website von <a target="_blank" href="http://www.dr-elsen-veranstaltung.de/predigten/veranstaltungskalender.php?kal_Start=1">Dr. Arne Elsen</a>'
+	cElsen = ', Veranstaltungsinfos sind von der Website von <a target="_blank" href="http://www.dr-elsen-veranstaltung.de/predigten/veranstaltungskalender.php?kal_Start=1">Dr. Arne Elsen</a>'
 	$("#crbla").html(" Die Informationen bezieht die Karte aus den von Dr. Arne Elsen <a href=\"http://www.dr-elsen-veranstaltung.de/predigten/veranstaltungskalender.php?kal_Start=1\" target=\"_blank\">veröffentlichten</a> Veranstaltungsterminen auf seiner Website.")
 }
-L.tileLayer('http://otile1.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.jpg', {
+// L.tileLayer('http://otile1.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.jpg', {
+L.tileLayer('http://b.www.toolserver.org/tiles/bw-mapnik/{z}/{x}/{y}.png', {
 	maxZoom: 18,
 	attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
 		'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-		'Imagery © <a href="http://mapquest.com">MapQuest</a>, ' + cElsen
+		'Imagery © <a href="http://mapquest.com">MapQuest</a>' + cElsen
 		
 }).addTo(map);
 
@@ -69,13 +70,29 @@ function onEachFeature(feature, layer) {
 		layer.bindLabel(labeltext, { noHide: true })
 }
 
-function getColor(prevented){
-	if(prevented){
-		return "#00FF00"
+function getColor(prevented, time){
+	if(time > now){
+		if(prevented){
+			return "#00FF44"
+		}
+		else{
+			return "#0055CC"
+		}
 	}
-	else{
-		return "#FF0000"
+	else
+		return "#000"
+}
+function getBorderColor(prevented, time){
+	if(time < now){
+		if(prevented){
+			return "#00FF44"
+		}
+		else{
+			return "#0044CC"
+		}
 	}
+	else
+		return "#000"
 }
 
 function buildTime(day, month, year, time){
@@ -167,13 +184,28 @@ $.getJSON( "data/standorte.geojson", function( data ) {
 			onEachFeature: onEachFeature,
 
 			pointToLayer: function (feature, latlng) {
+				var fillOpacity = 0.8
+				var radius = 8
+				var weight = 2
+				if(feature.properties.minstart< now){
+					fillOpacity = 0.4
+					if (!feature.properties.prevented) {
+						radius = 6
+					};
+				}
+				else{
+					radius = 10
+					weight = 3
+				}
+
+
 				return L.circleMarker(latlng, {
-					radius: 8,
-					fillColor: getColor(feature.properties.prevented),
-					color: "#000",
-					weight: 1,
+					radius: radius,
+					fillColor: getColor(feature.properties.prevented, feature.properties.minstart),
+					color: getBorderColor(feature.properties.prevented, feature.properties.minstart),
+					weight: weight,
 					opacity: 1,
-					fillOpacity: 0.8
+					fillOpacity: fillOpacity
 				});
 			}
 		})
