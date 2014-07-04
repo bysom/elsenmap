@@ -4,6 +4,8 @@ var places = []
 var now = new Date()
 var aufsUrheberrechtScheissen = false
 var cElsen = ""
+var errors = []
+var tmpHashes = []
 
 if (aufsUrheberrechtScheissen){
 	cElsen = ', Veranstaltungsinfos sind von der Website von <a target="_blank" href="http://www.dr-elsen-veranstaltung.de/predigten/veranstaltungskalender.php?kal_Start=1">Dr. Arne Elsen</a>'
@@ -113,6 +115,7 @@ function buildTime(day, month, year, time){
 function getEventObj(row){
 	var hash = md5(row[0])
 	var placehash = md5(row[6])
+	tmpHashes.push(hash)
 	return {
 		start: buildTime(row[1],row[2],row[3],row[4])
 		, end: buildTime(row[1],row[2],row[3],row[5])
@@ -215,9 +218,34 @@ $.getJSON( "data/standorte.geojson", function( data ) {
 					fillOpacity: fillOpacity
 				});
 			}
-		})
-			.addTo(map);
+		}).addTo(map);
 
+	    //Daten auf Veränderung checken anhand bekannter Hashes
+	    $.getJSON('data/hashes.json', function(json, textStatus) {
+	    	var usedHashes = []
+	    	newerrors = []
+	    	for (var i = 0; i < places.length; i++) {
+	    		for (var j = 0; j < places[i].properties.dates.length; j++) {
+	    			if(json.hashes.indexOf(places[i].properties.dates[j].hash) >= 0){
+	    				usedHashes.push(places[i].properties.dates[j].hash)
+	    			}
+	    			else{
+	    				newerrors.push(places[i].properties.dates[j].place)
+	    			}
+	    		};
+	    		
+	    	};
+	    	if(newerrors.length > 0){
+		    	var errobj = {
+					type: "warning"
+					, content: "Es gab Veränderungen, die noch nicht in die Karte eingepflegt wurden an den Orten <br><ul><li>"+newerrors.join("</li><li>")+"</li></ul>"
+					, title: "Achtung!"
+				}
+				errors.push(errobj)
+				$("#infoBox").html("<div class=\"alert alert-"+errobj.type+" alert-dismissable\" role=\"alert\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\"><span aria-hidden=\"true\">&times;</span><span class=\"sr-only\">Close</span></button><strong>"+errobj.title+"</strong> "+errobj.content+"</div>")
+			}
+	    });
+	    
 	});
 	
 });
