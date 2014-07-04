@@ -73,26 +73,31 @@ function onEachFeature(feature, layer) {
 function getColor(prevented, time){
 	if(time > now){
 		if(prevented){
-			return "#00FF44"
+			return "#CCFF33"
 		}
 		else{
-			return "#0055CC"
+			return "#C3C3C3"
 		}
 	}
 	else
 		return "#000"
 }
 function getBorderColor(prevented, time){
-	if(time < now){
+	if(time > now){
 		if(prevented){
-			return "#00FF44"
+			return "#000"
 		}
 		else{
-			return "#0044CC"
+			return "#000"
 		}
 	}
 	else
-		return "#000"
+		if(prevented){
+			return "#0F0"
+		}
+		else{
+			return "#F00"
+		}
 }
 
 function buildTime(day, month, year, time){
@@ -184,11 +189,12 @@ $.getJSON( "data/standorte.geojson", function( data ) {
 			onEachFeature: onEachFeature,
 
 			pointToLayer: function (feature, latlng) {
-				var fillOpacity = 0.8
+				var fillOpacity = 0.9
 				var radius = 8
 				var weight = 2
+				var opacity = 0.5
 				if(feature.properties.minstart< now){
-					fillOpacity = 0.4
+					fillOpacity = 0.6
 					if (!feature.properties.prevented) {
 						radius = 6
 					};
@@ -204,7 +210,7 @@ $.getJSON( "data/standorte.geojson", function( data ) {
 					fillColor: getColor(feature.properties.prevented, feature.properties.minstart),
 					color: getBorderColor(feature.properties.prevented, feature.properties.minstart),
 					weight: weight,
-					opacity: 1,
+					opacity: opacity,
 					fillOpacity: fillOpacity
 				});
 			}
