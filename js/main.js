@@ -193,7 +193,7 @@ $.getJSON( "data/standorte.geojson", function( data ) {
 				var fillOpacity = 0.9
 				var radius = 8
 				var weight = 2
-				var opacity = 0.5
+				var opacity = 0.3
 				if(feature.properties.minstart< now){
 					fillOpacity = 0.6
 					if (!feature.properties.prevented) {
