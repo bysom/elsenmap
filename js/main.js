@@ -136,6 +136,7 @@ function labelText(left){
 	}
 }
 
+
 // Die Geodaten laden
 $.getJSON( "data/standorte.geojson", function( data ) {
 	places = data.features
