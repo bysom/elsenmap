@@ -155,11 +155,16 @@ $.getJSON( "data/standorte.geojson", function( data ) {
 	kalData = []
 	var re = /<tr>\n[ ]*<td class="kal[\w]+"[\w ="\-:;><\/.?&]+">([\d]{1,2}).([\d]{1,2}).([\d]{2,4})[\w&;<>\/]+\n[ ]*<td class="kal[\w]+"[\w ="\-:;><\/.?&]+">([\w:&;]*)<\/td>\n[ ]*<td class="kal[\w]+"[\w ="\-:;><\/.?&]+>([\w:&;]*)<\/td>\n[ ]*<td class="kal[\w]+"[\w ="\-:;><\/.?&]+>([\w:&;., \-äöüÄÖÜß\/<>@+\(\)'=]*)<\/td>\n[ ]*<td class="kal[\w]+"[\w ="\-:;><\/.?&]+>([\w:&;., \-äöüÄÖÜß\/<>@+\(\)'=]*)<\/td>\n[ ]*<td class="kal[\w]+"[\w ="\-:;><\/.?&]+>([\w:&;., \-äöüÄÖÜß\/<>@+\(\)?'"=]*)<\/td>\n/gi;
 	$.ajax({
-		url: 'data/kalender.html'
+		// url: 'data/kalender.html'
+		url: 'http://www.dr-elsen-veranstaltung.de/kalender/kalender.php?kal_Aktion=druck'
+		, dataType: 'jsonp'
+		// , crossDomain: true
 		, beforeSend: function(jqXHR) {
-	        jqXHR.overrideMimeType('text/html;charset=iso-8859-1');
+	        jqXHR.overrideMimeType('text/text;charset=iso-8859-1');
 	    }
-	}).done(function(data2) {
+	}).done(function(data3) {
+		console.log(data3)
+		data2 = data3.toString()
 		//Geodaten um Veranstaltungen erweitern
 	    while(row = re.exec(data2)){
 	    	var cvent = getEventObj(row)
@@ -253,8 +258,6 @@ $.getJSON( "data/standorte.geojson", function( data ) {
 				errors.push(errobj)
 				$("#infoBox").html("<div class=\"alert alert-"+errobj.type+" alert-dismissable\" role=\"alert\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\"><span aria-hidden=\"true\">&times;</span><span class=\"sr-only\">Close</span></button><strong>"+errobj.title+"</strong> "+errobj.content+"</div>")
 			}
-	    });
-	    
+	    }); 
 	});
-	
 });
