@@ -140,7 +140,8 @@ if (aufsUrheberrechtScheissen){
 	$("#crbla").html(" Die Informationen bezieht die Karte aus den von Dr. Arne Elsen <a href=\"http://www.dr-elsen-veranstaltung.de/predigten/veranstaltungskalender.php?kal_Start=1\" target=\"_blank\">veröffentlichten</a> Veranstaltungsterminen auf seiner Website.")
 }
 // L.tileLayer('http://otile1.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.jpg', {
-L.tileLayer('http://b.www.toolserver.org/tiles/bw-mapnik/{z}/{x}/{y}.png', {
+//L.tileLayer('http://b.www.toolserver.org/tiles/bw-mapnik/{z}/{x}/{y}.png', {
+L.tileLayer('http://a.tile.stamen.com/toner/{z}/{x}/{y}.png',{
 	maxZoom: 18,
 	attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
 		'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
@@ -155,9 +156,9 @@ $.getJSON( "data/standorte.geojson", function( data ) {
 	kalData = []
 	var re = /<tr>\n[ ]*<td class="kal[\w]+"[\w ="\-:;><\/.?&]+">([\d]{1,2}).([\d]{1,2}).([\d]{2,4})[\w&;<>\/]+\n[ ]*<td class="kal[\w]+"[\w ="\-:;><\/.?&]+">([\w:&;]*)<\/td>\n[ ]*<td class="kal[\w]+"[\w ="\-:;><\/.?&]+>([\w:&;]*)<\/td>\n[ ]*<td class="kal[\w]+"[\w ="\-:;><\/.?&]+>([\w:&;., \-äöüÄÖÜß\/<>@+\(\)'=]*)<\/td>\n[ ]*<td class="kal[\w]+"[\w ="\-:;><\/.?&]+>([\w:&;., \-äöüÄÖÜß\/<>@+\(\)'=]*)<\/td>\n[ ]*<td class="kal[\w]+"[\w ="\-:;><\/.?&]+>([\w:&;., \-äöüÄÖÜß\/<>@+\(\)?'"=]*)<\/td>\n/gi;
 	$.ajax({
-		// url: 'data/kalender.html'
-		url: 'http://www.dr-elsen-veranstaltung.de/kalender/kalender.php?kal_Aktion=druck'
-		, dataType: 'jsonp'
+		url: 'data/kalender.html'
+		//url: 'http://www.dr-elsen-veranstaltung.de/kalender/kalender.php?kal_Aktion=druck'
+		//, dataType: 'jsonp'
 		// , crossDomain: true
 		, beforeSend: function(jqXHR) {
 	        jqXHR.overrideMimeType('text/text;charset=iso-8859-1');

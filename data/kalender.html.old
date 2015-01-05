@@ -1,0 +1,565 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<!-- <meta http-equiv="content-type" content="text/html; charset=utf-8"> -->
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="expires" content="0">
+<title>Kalender-Script</title>
+<style type="text/css">
+<!--
+body{background-color:#FFFFEE;}
+h1,h2,h3,h4,div,p,a{font-family:Verdana,Arial,Helvetica;}
+-->
+</style>
+<link rel="stylesheet" type="text/css" href="kalStyle.css">
+</head>
+
+<body style="background-color:#FFFFFF;">
+<table class="kalBlnd" border="1" width="100%" cellpadding="0" cellspacing="0">
+ <tr>
+  <td class="kalBlnd" style="width:64px;background-image:url(grafik/drucken.gif);background-repeat:no-repeat;vertical-align:top;">
+   <a href="javascript:window.print()"><img src="grafik/pixel.gif" width="64" height="16" border="0" title="jetzt drucken"></a></td>
+  <td class="kalBlnd" style="text-align:center;"><h3 align="center">Kalender</h3></td>
+  <td class="kalBlnd" style="width:64px;background-image:url(grafik/drucken.gif);background-repeat:no-repeat;vertical-align:top;">
+   <a href="javascript:window.print()"><img src="grafik/pixel.gif" width="64" height="16" border="0" title="jetzt drucken"></a></td>
+  </td>
+ </tr>
+</table>
+
+<div align="center">
+<!-- ++++++++++++++ Beginn Scriptausgabe ++++++++++++++ -->
+
+
+<div class="kalBox">
+
+<div class="kalAktO">
+&nbsp;[&nbsp;<a class="kalAkti" href="/kalender/kalender.php">Terminliste</a>&nbsp;]&nbsp;
+&nbsp;[&nbsp;<a class="kalAkti" href="/kalender/kalender.php?kal_Aktion=suche">Termine suchen</a>&nbsp;]&nbsp;
+&nbsp;[&nbsp;<a class="kalAkti" href="/kalender/kalender.php?kal_Aktion=login">Anmelden</a>&nbsp;]&nbsp;
+</div>
+
+<p class="kalMeld"></p>
+
+<table class="kalDruck" border="0" cellpadding="0" cellspacing="0">
+ <tr>
+  <td class="kalDruck"><span class="kalDrKz">Datum</span></td>
+  <td class="kalDruck"><span class="kalDrKz">Beginnt</span></td>
+  <td class="kalDruck"><span class="kalDrKz">Endet</span></td>
+  <td class="kalDruck"><span class="kalDrKz">Ort</span></td>
+  <td class="kalDruck"><span class="kalDrKz">Betreff</span></td>
+  <td class="kalDruck"><span class="kalDrKz">Beschreibung</span></td>
+ </tr>
+ <tr>
+  <td class="kalDruck" style="vertical-align:top;">29.06.2014&nbsp;So</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">10:00</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">13:00</td>
+  <td class="kalDruck" style="vertical-align:top;">Lagerstr.41,3360 Herzogenbuchsee, s.o. Schweiz</td>
+  <td class="kalDruck" style="vertical-align:top;">Heilungsgottesdienst mit Kinderbetreuung</td>
+  <td class="kalDruck" style="vertical-align:top;">Heilungsgottesdienst mit Dr Arne Elsen aus Hamburg<br />Veranstalter : Pastor Markus Burkhardt <br />markus.burkhardt@gmx.ch</td>
+ </tr>
+ <tr>
+  <td class="kalDruck" style="vertical-align:top;">05.07.2014&nbsp;Sa</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">14:00</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">15:30</td>
+  <td class="kalDruck" style="vertical-align:top;">Veranstaltungsort: Penta Hotel Gera, Gutenbergstr.2,07548 Gera , Tel : 0365-29090</td>
+  <td class="kalDruck" style="vertical-align:top;">Heilungsseminar</td>
+  <td class="kalDruck" style="vertical-align:top;">Kontakt: Ev.Christengemeinde Gera-Ernsee, Pottendorfer Weg 95,07548 Gera, Tel: 0365-811954<br />pfingstgemeinde.gera@web.de Anmeldung unter: pfingstgemeinde.gera@gmail.com</td>
+ </tr>
+ <tr>
+  <td class="kalDruck" style="vertical-align:top;">05.07.2014&nbsp;Sa</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">16:00</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">17:30</td>
+  <td class="kalDruck" style="vertical-align:top;">Veranstaltungsort: Penta Hotel Gera, Gutenbergstr.2,07548 Gera , Tel : 0365-29090</td>
+  <td class="kalDruck" style="vertical-align:top;">Heilungsseminar</td>
+  <td class="kalDruck" style="vertical-align:top;">Kontakt: Ev.Christengemeinde Gera-Ernsee, Pottendorfer Weg 95,07548 Gera, Tel: 0365-811954<br />pfingstgemeinde.gera@ ANMELDUNG unter:pfingstgemeinde.gera@gmail.com</td>
+ </tr>
+ <tr>
+  <td class="kalDruck" style="vertical-align:top;">05.07.2014&nbsp;Sa</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">19:30</td>
+  <td class="kalDruck" style="vertical-align:top;">&nbsp;</td>
+  <td class="kalDruck" style="vertical-align:top;">Veranstaltungsort: Penta Hotel Gera, Gutenbergstr.2,07548 Gera , Tel : 0365-29090</td>
+  <td class="kalDruck" style="vertical-align:top;">Heilungsgottesdienst</td>
+  <td class="kalDruck" style="vertical-align:top;">Kontakt: Ev.Christengemeinde Gera-Ernsee, Pottendorfer Weg 95,07548 Gera, Tel: 0365-811954<br />pfingstgemeinde.gera@web.de, ANMELDUNG pfingstgemeinde.gera@gmail.com</td>
+ </tr>
+ <tr>
+  <td class="kalDruck" style="vertical-align:top;">06.07.2014&nbsp;So</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">10:00</td>
+  <td class="kalDruck" style="vertical-align:top;">&nbsp;</td>
+  <td class="kalDruck" style="vertical-align:top;">Veranstaltungsort: Penta Hotel Gera, Gutenbergstr.2,07548 Gera , Tel : 0365-29090</td>
+  <td class="kalDruck" style="vertical-align:top;">Heilungsgottesdienst</td>
+  <td class="kalDruck" style="vertical-align:top;">Kontakt: Ev.Christengemeinde Gera-Ernsee, Pottendorfer Weg 95,07548 Gera, Tel: 0365-811954<br />pfingstgemeinde.gera@web.de, Anmeldung pfingstgemeinde.gera@gmail.com</td>
+ </tr>
+ <tr>
+  <td class="kalDruck" style="vertical-align:top;">19.07.2014&nbsp;Sa</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">13:30</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">15:00</td>
+  <td class="kalDruck" style="vertical-align:top;">Musikschule des Landkreises Oldenburg, Burgstr.17,27793 Wildeshausen</td>
+  <td class="kalDruck" style="vertical-align:top;">Heilungsseminar</td>
+  <td class="kalDruck" style="vertical-align:top;">Veranstalter FCG Wildeshausen, Bargloyer Str. 4,27793 Wildeshausen, Kontaktperson: Darius Lewandowski , Gemeindeleiterin : Susanne Schäfer.</td>
+ </tr>
+ <tr>
+  <td class="kalDruck" style="vertical-align:top;">19.07.2014&nbsp;Sa</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">15:30</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">17:00</td>
+  <td class="kalDruck" style="vertical-align:top;">Musikschule des Landkreises Oldenburg, Burgstr.17,27793 Wildeshausen</td>
+  <td class="kalDruck" style="vertical-align:top;">Heilungsseminar</td>
+  <td class="kalDruck" style="vertical-align:top;">Veranstalter FCG Wildeshausen, Bargloyer Str. 4,27793 Wildeshausen, Kontaktperson: Darius Lewandowski , Gemeindeleiterin : Susanne Schäfer</td>
+ </tr>
+ <tr>
+  <td class="kalDruck" style="vertical-align:top;">19.07.2014&nbsp;Sa</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">19:00</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">21:30</td>
+  <td class="kalDruck" style="vertical-align:top;">Musikschule des Landkreises Oldenburg, Burgstr.17,27793 Wildeshausen</td>
+  <td class="kalDruck" style="vertical-align:top;">Heilungsgottesdienst</td>
+  <td class="kalDruck" style="vertical-align:top;">Veranstalter FCG Wildeshausen, Bargloyer Str. 4,27793 Wildeshausen, Kontaktperson: Darius Lewandowski , Gemeindeleiterin : Susanne Schäfer</td>
+ </tr>
+ <tr>
+  <td class="kalDruck" style="vertical-align:top;">26.07.2014&nbsp;Sa</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">14:30</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">18:00</td>
+  <td class="kalDruck" style="vertical-align:top;">FCG Freiburg, Ziegelhofstraße 200, 79110 Freiburg-Lehen</td>
+  <td class="kalDruck" style="vertical-align:top;">Heilungsseminar</td>
+  <td class="kalDruck" style="vertical-align:top;">Veranstalter. FCG Freiburg, Gemeindeleiter: Pastor Hans-Peter Zimpfer</td>
+ </tr>
+ <tr>
+  <td class="kalDruck" style="vertical-align:top;">27.07.2014&nbsp;So</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">11:00</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">13:30</td>
+  <td class="kalDruck" style="vertical-align:top;">ICF Freiburg Breisgau,ICF Freiburg im Breisgau,Cinemaxx Freiburg,Bertoldstr.50,Kinosaal 9,Haltestelle Stadttheater</td>
+  <td class="kalDruck" style="vertical-align:top;">Heilungsgottesdienst</td>
+  <td class="kalDruck" style="vertical-align:top;">ICF Freibung , Gemeindeleiter: Pastor Jörg Gräfingholt</td>
+ </tr>
+ <tr>
+  <td class="kalDruck" style="vertical-align:top;">27.07.2014&nbsp;So</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">18:00</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">21:00</td>
+  <td class="kalDruck" style="vertical-align:top;">FCG Freiburg, Ziegelhofstraße 200, 79110 Freiburg-Lehen, Details folgen</td>
+  <td class="kalDruck" style="vertical-align:top;">Heilungsgottesdienst</td>
+  <td class="kalDruck" style="vertical-align:top;">Veranstalter: FCG Freiburg, Pastor: Hans-Peter Zimpfer</td>
+ </tr>
+ <tr>
+  <td class="kalDruck" style="vertical-align:top;">16.08.2014&nbsp;Sa</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">13:00</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">22:30</td>
+  <td class="kalDruck" style="vertical-align:top;">Gesundheitszentrum Gwatt, Thuner See, Schweiz ( Details folgen)</td>
+  <td class="kalDruck" style="vertical-align:top;">Heilungskonferenz</td>
+  <td class="kalDruck" style="vertical-align:top;">Veranstalter: Walter Bernhard, Gesundheitszentrum Gwatt/Thuner See</td>
+ </tr>
+ <tr>
+  <td class="kalDruck" style="vertical-align:top;">17.08.2014&nbsp;So</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">10:00</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">13:00</td>
+  <td class="kalDruck" style="vertical-align:top;">FEG ' Neues Land Emmental', CH- 3452- Grünenmatt</td>
+  <td class="kalDruck" style="vertical-align:top;">Heilungsgottesdienst</td>
+  <td class="kalDruck" style="vertical-align:top;">Veranstalter: Gemeindeleiter: Pastor W. Wieland, FEG &quot; Neues Land Grünenmatt&quot;</td>
+ </tr>
+ <tr>
+  <td class="kalDruck" style="vertical-align:top;">22.08.2014&nbsp;Fr</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">19:00</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">22:00</td>
+  <td class="kalDruck" style="vertical-align:top;">Stadttheater Olten, Frohburgstraße 1, 4600 Olten, Schweiz</td>
+  <td class="kalDruck" style="vertical-align:top;">Heilungsabend (öffentlich)</td>
+  <td class="kalDruck" style="vertical-align:top;">Veranstalter: Freie Christengemeinde Olten     gottseidank.ch<br />                     Voice of Healig, Oftringen      voice-of-healing.ch</td>
+ </tr>
+ <tr>
+  <td class="kalDruck" style="vertical-align:top;">23.08.2014&nbsp;Sa</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">10:00</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">17:00</td>
+  <td class="kalDruck" style="vertical-align:top;">Stadttheater Olten,Frohburgstr.1,4600 Olten/ Schweiz</td>
+  <td class="kalDruck" style="vertical-align:top;">Heilungs-Seminar (Details folgen)</td>
+  <td class="kalDruck" style="vertical-align:top;">Veranstalter Freie Christengemeinde Olten,gottseidank.ch<br />Voice of Healing,Oftringen, voice-of-healing.ch</td>
+ </tr>
+ <tr>
+  <td class="kalDruck" style="vertical-align:top;">23.08.2014&nbsp;Sa</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">19:00</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">22:00</td>
+  <td class="kalDruck" style="vertical-align:top;">Stadttheater Olten, Frohburgstraße 1, 4600 Olten, Schweiz</td>
+  <td class="kalDruck" style="vertical-align:top;">Heilungsabend (öffentlich)</td>
+  <td class="kalDruck" style="vertical-align:top;">Veranstalter Freie Christengemeinde Olten     gottseidank.ch<br />                     Voice of Healig, Oftringen      voice-of-healing.ch</td>
+ </tr>
+ <tr>
+  <td class="kalDruck" style="vertical-align:top;">24.08.2014&nbsp;So</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">10:00</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">12:30</td>
+  <td class="kalDruck" style="vertical-align:top;">Stadttheater Olten, Frohburgstraße 1, 4600 Olten, Schweiz</td>
+  <td class="kalDruck" style="vertical-align:top;">Heilungsgottesdienst (öffentlich)</td>
+  <td class="kalDruck" style="vertical-align:top;">Veranstalter Freie Christengemeinde Olten     gottseidank.ch<br />                     Voice of Healig, Oftringen      voice-of-healing.ch</td>
+ </tr>
+ <tr>
+  <td class="kalDruck" style="vertical-align:top;">06.09.2014&nbsp;Sa</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">14:30</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">18:00</td>
+  <td class="kalDruck" style="vertical-align:top;">Friedensgemeinde Norden, Am Schlicktief 3, 26506 Norden</td>
+  <td class="kalDruck" style="vertical-align:top;">Workshop für Mitarbeiter</td>
+  <td class="kalDruck" style="vertical-align:top;">Wie bete ich für Kranke</td>
+ </tr>
+ <tr>
+  <td class="kalDruck" style="vertical-align:top;">06.09.2014&nbsp;Sa</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">19:30</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">22:00</td>
+  <td class="kalDruck" style="vertical-align:top;">Friedensgemeinde Norden, Am Schlicktief 3, 26506 Norden</td>
+  <td class="kalDruck" style="vertical-align:top;">Heilungsgottesdienst</td>
+  <td class="kalDruck" style="vertical-align:top;">&nbsp;</td>
+ </tr>
+ <tr>
+  <td class="kalDruck" style="vertical-align:top;">07.09.2014&nbsp;So</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">10:00</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">13:00</td>
+  <td class="kalDruck" style="vertical-align:top;">Friedensgemeinde Norden, Am Schlicktief 3, 26506 Norden</td>
+  <td class="kalDruck" style="vertical-align:top;">Heilungsgottesdienst</td>
+  <td class="kalDruck" style="vertical-align:top;">&nbsp;</td>
+ </tr>
+ <tr>
+  <td class="kalDruck" style="vertical-align:top;">12.09.2014&nbsp;Fr</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">19:45</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">22:00</td>
+  <td class="kalDruck" style="vertical-align:top;">FCG 'Christen im Alltag', Gfäll 19,6941 Langenegg, Österreich</td>
+  <td class="kalDruck" style="vertical-align:top;">Seminar Teil 1 mit Heilungsgebet für Kranke</td>
+  <td class="kalDruck" style="vertical-align:top;">&nbsp;</td>
+ </tr>
+ <tr>
+  <td class="kalDruck" style="vertical-align:top;">13.09.2014&nbsp;Sa</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">13:00</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">16:30</td>
+  <td class="kalDruck" style="vertical-align:top;">FCG 'Christen im Alltag', Gfäll 19,6941 Langenegg, Österreich</td>
+  <td class="kalDruck" style="vertical-align:top;">Zweiteiliges Seminar für Multiplikatoren ( 30,00 Euro nur mit Anmeldung )</td>
+  <td class="kalDruck" style="vertical-align:top;">Die Anmeldungen für das Seminar bis spätestens 02.09.2014 an office@christenimalltag.at</td>
+ </tr>
+ <tr>
+  <td class="kalDruck" style="vertical-align:top;">13.09.2014&nbsp;Sa</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">17:00</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">19:00</td>
+  <td class="kalDruck" style="vertical-align:top;">FCG 'Christen im Alltag', Gfäll 19,6941 Langenegg, Österreich</td>
+  <td class="kalDruck" style="vertical-align:top;">Seminar Teil 2 mit Heilungsgebet für Kranke</td>
+  <td class="kalDruck" style="vertical-align:top;">&nbsp;</td>
+ </tr>
+ <tr>
+  <td class="kalDruck" style="vertical-align:top;">13.09.2014&nbsp;Sa</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">19:45</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">22:00</td>
+  <td class="kalDruck" style="vertical-align:top;">FCG 'Christen im Alltag', Gfäll 19, 6941 Langenegg, Österreich</td>
+  <td class="kalDruck" style="vertical-align:top;">Seminar Teil 3 mit Heilungsgebet für Kranke</td>
+  <td class="kalDruck" style="vertical-align:top;">&nbsp;</td>
+ </tr>
+ <tr>
+  <td class="kalDruck" style="vertical-align:top;">14.09.2014&nbsp;So</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">09:30</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">13:00</td>
+  <td class="kalDruck" style="vertical-align:top;">FCG 'Christen im Alltag', Gfäll 19,6941 Langenegg, Österreich</td>
+  <td class="kalDruck" style="vertical-align:top;">HEILUNGSGOTTESDIENST mit Gebet für Kranke</td>
+  <td class="kalDruck" style="vertical-align:top;">&nbsp;</td>
+ </tr>
+ <tr>
+  <td class="kalDruck" style="vertical-align:top;">27.09.2014&nbsp;Sa</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">13:00</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">17:30</td>
+  <td class="kalDruck" style="vertical-align:top;">Lagerhauskirche Kaiserslautern</td>
+  <td class="kalDruck" style="vertical-align:top;">Seminar: 'wie bete ich für Kranke'</td>
+  <td class="kalDruck" style="vertical-align:top;">&nbsp;</td>
+ </tr>
+ <tr>
+  <td class="kalDruck" style="vertical-align:top;">27.09.2014&nbsp;Sa</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">19:30</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">22:30</td>
+  <td class="kalDruck" style="vertical-align:top;">Lagerhauskirche Kaiserslautern</td>
+  <td class="kalDruck" style="vertical-align:top;">Heilungsgottesdienst</td>
+  <td class="kalDruck" style="vertical-align:top;">&nbsp;</td>
+ </tr>
+ <tr>
+  <td class="kalDruck" style="vertical-align:top;">28.09.2014&nbsp;So</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">10:00</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">13:00</td>
+  <td class="kalDruck" style="vertical-align:top;">Lagerhauskirche Kaiserslautern</td>
+  <td class="kalDruck" style="vertical-align:top;">Heilungsgottesdienst</td>
+  <td class="kalDruck" style="vertical-align:top;">&nbsp;</td>
+ </tr>
+ <tr>
+  <td class="kalDruck" style="vertical-align:top;">11.10.2014&nbsp;Sa</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">13:00</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">17:30</td>
+  <td class="kalDruck" style="vertical-align:top;">Ebhard-Heim-Str. 34, 74523 Schwäbisch-Hall / Hessental</td>
+  <td class="kalDruck" style="vertical-align:top;">Heilungsseminar in der ev. Freikirchlichen Gemeinde Schwäbisch Hall</td>
+  <td class="kalDruck" style="vertical-align:top;">&nbsp;</td>
+ </tr>
+ <tr>
+  <td class="kalDruck" style="vertical-align:top;">11.10.2014&nbsp;Sa</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">19:30</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">22:00</td>
+  <td class="kalDruck" style="vertical-align:top;">Ebhard-Heim-Str. 34, 74523 Schwäbisch-Hall / Hessental</td>
+  <td class="kalDruck" style="vertical-align:top;">Heilungsgottesdienst in der ev. Freikirchlichen Gemeinde Schwäbisch Hall</td>
+  <td class="kalDruck" style="vertical-align:top;">&nbsp;</td>
+ </tr>
+ <tr>
+  <td class="kalDruck" style="vertical-align:top;">12.10.2014&nbsp;So</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">10:00</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">13:00</td>
+  <td class="kalDruck" style="vertical-align:top;">Ebhard-Heim-Str. 34, 74523 Schwäbisch-Hall / Hessental</td>
+  <td class="kalDruck" style="vertical-align:top;">Heilungsgottesdienst in der ev. Freikirchlichen Gemeinde Schwäbisch Hall</td>
+  <td class="kalDruck" style="vertical-align:top;">&nbsp;</td>
+ </tr>
+ <tr>
+  <td class="kalDruck" style="vertical-align:top;">01.11.2014&nbsp;Sa</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">13:00</td>
+  <td class="kalDruck" style="vertical-align:top;">&nbsp;</td>
+  <td class="kalDruck" style="vertical-align:top;">Am Bahnhof 3,97990 Weikersheim,</td>
+  <td class="kalDruck" style="vertical-align:top;">Heilungsseminar und Heilungsgottesdienst mit Dr. Arne Elsen aus Hamburg</td>
+  <td class="kalDruck" style="vertical-align:top;">Volksmission Familienkirche Weikersheim. 2 Seminare und Heilungsgottesdiest. Ansprechpartner Frau Siegrid  Striefler . Anmeldung für die Seminare: s.striefler@web.de</td>
+ </tr>
+ <tr>
+  <td class="kalDruck" style="vertical-align:top;">01.11.2014&nbsp;Sa</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">20:00</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">22:00</td>
+  <td class="kalDruck" style="vertical-align:top;">Am Bahnhof 3,97990 Weikersheim</td>
+  <td class="kalDruck" style="vertical-align:top;">Heilungsgottesdienst mit Dr. Arne Elsen aus Hamburg</td>
+  <td class="kalDruck" style="vertical-align:top;">Volksmission Familienkirche Weikersheim. Heilungsgottesdiest mit Dr Arne Elsen aus Hamburg  Ansprechpartner Frau Siegrid  Striefler (s.striefler@web.de)</td>
+ </tr>
+ <tr>
+  <td class="kalDruck" style="vertical-align:top;">02.11.2014&nbsp;So</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">10:00</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">13:00</td>
+  <td class="kalDruck" style="vertical-align:top;">Volksmission Ansbach, Türkenstraße 18, 91522 Ansbach</td>
+  <td class="kalDruck" style="vertical-align:top;">Heilungsgottesdienst mit Dr. Arne Elsen aus Hamburg</td>
+  <td class="kalDruck" style="vertical-align:top;">Volksmission Familienkirche Weikersheim. Ansprechpartner Frau Siegrid  Striefler (s.striefler@web.de)</td>
+ </tr>
+ <tr>
+  <td class="kalDruck" style="vertical-align:top;">08.11.2014&nbsp;Sa</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">14:00</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">17:00</td>
+  <td class="kalDruck" style="vertical-align:top;">Mühlweg 10, 69118 Heidelberg</td>
+  <td class="kalDruck" style="vertical-align:top;">Das Heilungsgebet der Christen- Einführungsseminar</td>
+  <td class="kalDruck" style="vertical-align:top;">Veranstalter: Pastor Eckehard Lorenz, Info unter: eckehartlorenz@gmail.com, Tel.: 0179-1351463</td>
+ </tr>
+ <tr>
+  <td class="kalDruck" style="vertical-align:top;">08.11.2014&nbsp;Sa</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">19:00</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">22:00</td>
+  <td class="kalDruck" style="vertical-align:top;">Mühlweg 10, 69118 Heidelberg</td>
+  <td class="kalDruck" style="vertical-align:top;">Das Heilungsgebet der Christen- Einführungsseminar</td>
+  <td class="kalDruck" style="vertical-align:top;">Veranstalter: Pastor Eckehard Lorenz, Info unter: eckehartlorenz@gmail.com, Tel.: 0179-1351463</td>
+ </tr>
+ <tr>
+  <td class="kalDruck" style="vertical-align:top;">09.11.2014&nbsp;So</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">10:00</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">13:00</td>
+  <td class="kalDruck" style="vertical-align:top;">Schelklystraße 102, 69126 Heidelberg</td>
+  <td class="kalDruck" style="vertical-align:top;">Das Heilungsgebet der Christen- Einführungsseminar</td>
+  <td class="kalDruck" style="vertical-align:top;">Veranstalter: Pastor Eckehard Lorenz, Info unter: eckehartlorenz@gmail.com, Tel.: 0179-1351463</td>
+ </tr>
+ <tr>
+  <td class="kalDruck" style="vertical-align:top;">15.11.2014&nbsp;Sa</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">13:00</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">17:00</td>
+  <td class="kalDruck" style="vertical-align:top;">Hotel Seeblick, 6376 Emmetten, Schweiz</td>
+  <td class="kalDruck" style="vertical-align:top;">Heilungsseminar</td>
+  <td class="kalDruck" style="vertical-align:top;">Veranstalter: Frau Hanny Dill, überkonfessionelle Frauengruppe, Mitglied in der SPM Schweiz</td>
+ </tr>
+ <tr>
+  <td class="kalDruck" style="vertical-align:top;">15.11.2014&nbsp;Sa</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">20:00</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">22:30</td>
+  <td class="kalDruck" style="vertical-align:top;">Hotel Seeblick, 6376 Emmetten, Schweiz</td>
+  <td class="kalDruck" style="vertical-align:top;">Heilungsgottesdienst</td>
+  <td class="kalDruck" style="vertical-align:top;">Veranstalter: Frau Hanny Dill, überkonfessionelle Frauengruppe, Mitglied in der SPM Schweiz</td>
+ </tr>
+ <tr>
+  <td class="kalDruck" style="vertical-align:top;">16.11.2014&nbsp;So</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">09:30</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">13:00</td>
+  <td class="kalDruck" style="vertical-align:top;">Hotel Seeblick, 6376 Emmetten, Schweiz</td>
+  <td class="kalDruck" style="vertical-align:top;">Heilungsgottesdienst</td>
+  <td class="kalDruck" style="vertical-align:top;">Veranstalter: Frau Hanny Dill, überkonfessionelle Frauengruppe, Mitglied in der SPM Schweiz</td>
+ </tr>
+ <tr>
+  <td class="kalDruck" style="vertical-align:top;">22.11.2014&nbsp;Sa</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">14:00</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">18:00</td>
+  <td class="kalDruck" style="vertical-align:top;">Nagold</td>
+  <td class="kalDruck" style="vertical-align:top;">Seminar: 'Wie bete ich für Kranke'</td>
+  <td class="kalDruck" style="vertical-align:top;">Veranstalter: Gemeinde der offenen Tür e.V., <br />Gemeindeleiter: Achim Aldinger</td>
+ </tr>
+ <tr>
+  <td class="kalDruck" style="vertical-align:top;">22.11.2014&nbsp;Sa</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">19:30</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">23:00</td>
+  <td class="kalDruck" style="vertical-align:top;">Nagold</td>
+  <td class="kalDruck" style="vertical-align:top;">Heilungsgottesdienst</td>
+  <td class="kalDruck" style="vertical-align:top;">Veranstalter: Gemeinde der offenen Tür e.V., <br />Gemeindeleiter: Achim Aldinger</td>
+ </tr>
+ <tr>
+  <td class="kalDruck" style="vertical-align:top;">23.11.2014&nbsp;So</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">10:00</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">13:00</td>
+  <td class="kalDruck" style="vertical-align:top;">Nagold</td>
+  <td class="kalDruck" style="vertical-align:top;">Heilungsgottesdienst</td>
+  <td class="kalDruck" style="vertical-align:top;">Veranstalter: Gemeinde der offenen Tür e.V., <br />Gemeindeleiter: Achim Aldinger</td>
+ </tr>
+ <tr>
+  <td class="kalDruck" style="vertical-align:top;">29.11.2014&nbsp;Sa</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">14:00</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">18:00</td>
+  <td class="kalDruck" style="vertical-align:top;">Volkshaus Spratzern, 3100 St Pölten</td>
+  <td class="kalDruck" style="vertical-align:top;">Heilungsseminare mit Dr.Arne Elsen</td>
+  <td class="kalDruck" style="vertical-align:top;">Veranstalter: FCG St.Pölten,Keimstrasse 1,3100 St.Pölten, Österreich, Pastor David M.Baptist</td>
+ </tr>
+ <tr>
+  <td class="kalDruck" style="vertical-align:top;">29.11.2014&nbsp;Sa</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">19:00</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">23:00</td>
+  <td class="kalDruck" style="vertical-align:top;">Volkshaus Spratzern, 3100 St Pölten</td>
+  <td class="kalDruck" style="vertical-align:top;">Heilungsgottesdienst</td>
+  <td class="kalDruck" style="vertical-align:top;">Veranstalter: FCG St.Pölten,Keimstrasse 1,3100 St.Pölten, Österreich Pastor David M.Baptist,</td>
+ </tr>
+ <tr>
+  <td class="kalDruck" style="vertical-align:top;">30.11.2014&nbsp;So</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">10:00</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">13:00</td>
+  <td class="kalDruck" style="vertical-align:top;">Daten folgen</td>
+  <td class="kalDruck" style="vertical-align:top;">Heilungsgottesdienst</td>
+  <td class="kalDruck" style="vertical-align:top;">Pastor David M.Baptist,Keimstr.1,A-3100 St.Pölten,Österreich</td>
+ </tr>
+ <tr>
+  <td class="kalDruck" style="vertical-align:top;">06.12.2014&nbsp;Sa</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">14:00</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">18:00</td>
+  <td class="kalDruck" style="vertical-align:top;">Eschach Halle, Kehlstraße 35 in 88214 Ravensburg/ ohne Voranmeldung</td>
+  <td class="kalDruck" style="vertical-align:top;">Heilungsseminar in den Heilungsräumen Ravensburg e.V.</td>
+  <td class="kalDruck" style="vertical-align:top;">Veranstalter: Heilungsräume Ravensburg e.V.,<br /><br />weitere Infos: www.heilungsraeume-rv.de<br /><br />Einlaß ab 13:00 Uhr ,Seminargebühr: 15 Euro/Person<br />Tel: 07558-921725</td>
+ </tr>
+ <tr>
+  <td class="kalDruck" style="vertical-align:top;">06.12.2014&nbsp;Sa</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">19:00</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">22:00</td>
+  <td class="kalDruck" style="vertical-align:top;">Eschach Halle, Kehlstraße 35 in 88214 Ravensburg/ OHNE VORANMELDUNG</td>
+  <td class="kalDruck" style="vertical-align:top;">Heilungsgottesdienst in den Heilungsräumen Ravensburg e.V.</td>
+  <td class="kalDruck" style="vertical-align:top;">Veranstalter: Heilungsräume Ravensburg e.V.<br />weitere Infos: www.heilungsraeume-rv.de<br />Tel: 07558-921725</td>
+ </tr>
+ <tr>
+  <td class="kalDruck" style="vertical-align:top;">07.12.2014&nbsp;So</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">10:00</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">13:00</td>
+  <td class="kalDruck" style="vertical-align:top;">Eschach Halle, Kehlstraße 35 in 88214 Ravensburg/ OHNE VORANMELDUNG</td>
+  <td class="kalDruck" style="vertical-align:top;">Heilungsgottesdienst in den Heilungsräumen Ravensburg e.V.</td>
+  <td class="kalDruck" style="vertical-align:top;">Veranstalter: Heilungsräume Ravensburg e.V.,<br />weitere Infos: www.heilungsraeume-rv.de<br />Tel: 07558-921725</td>
+ </tr>
+ <tr>
+  <td class="kalDruck" style="vertical-align:top;">31.01.2015&nbsp;Sa</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">14:30</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">17:30</td>
+  <td class="kalDruck" style="vertical-align:top;">Ecclesia- Gemeinde Neumarkt, Winnberger Weg 9, 92318 Neumarkt</td>
+  <td class="kalDruck" style="vertical-align:top;">Heilungsseminar</td>
+  <td class="kalDruck" style="vertical-align:top;">Veranstalter: Ecclesia- Gemeinde Neumarkt, Gemeindeleiter: Pastor Avram Matei</td>
+ </tr>
+ <tr>
+  <td class="kalDruck" style="vertical-align:top;">31.01.2015&nbsp;Sa</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">19:30</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">22:30</td>
+  <td class="kalDruck" style="vertical-align:top;">Ecclesia- Gemeinde Neumarkt, Winnberger Weg 9, 92318 Neumarkt</td>
+  <td class="kalDruck" style="vertical-align:top;">Heilungsgottesdienst</td>
+  <td class="kalDruck" style="vertical-align:top;">Veranstalter: Gemeindeleiter Pastor Avram Matei</td>
+ </tr>
+ <tr>
+  <td class="kalDruck" style="vertical-align:top;">01.02.2015&nbsp;So</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">10:00</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">13:00</td>
+  <td class="kalDruck" style="vertical-align:top;">Ecclesia-Gemeinde Neumarkt, Winnberger Wg 9, 92318 Neumarkt</td>
+  <td class="kalDruck" style="vertical-align:top;">Heilungsgottesdienst</td>
+  <td class="kalDruck" style="vertical-align:top;">&nbsp;</td>
+ </tr>
+ <tr>
+  <td class="kalDruck" style="vertical-align:top;">14.02.2015&nbsp;Sa</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">14:00</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">17:30</td>
+  <td class="kalDruck" style="vertical-align:top;">Gospelcenter Brugg, Schweiz</td>
+  <td class="kalDruck" style="vertical-align:top;">Heilungsseminar</td>
+  <td class="kalDruck" style="vertical-align:top;">&nbsp;</td>
+ </tr>
+ <tr>
+  <td class="kalDruck" style="vertical-align:top;">14.02.2015&nbsp;Sa</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">19:30</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">22:30</td>
+  <td class="kalDruck" style="vertical-align:top;">Gospelcenter Brugg, Schweiz</td>
+  <td class="kalDruck" style="vertical-align:top;">Heilungsgottesdienst</td>
+  <td class="kalDruck" style="vertical-align:top;">Veranstalter: Gemeindeleiter Pastor Michael Merkt</td>
+ </tr>
+ <tr>
+  <td class="kalDruck" style="vertical-align:top;">15.02.2015&nbsp;So</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">10:00</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">13:00</td>
+  <td class="kalDruck" style="vertical-align:top;">Gospelcenter Brugg, Schweiz</td>
+  <td class="kalDruck" style="vertical-align:top;">Heilungsgottesdienst</td>
+  <td class="kalDruck" style="vertical-align:top;">Veranstalter: Gemeindeleiter Pastor Michael Merkt</td>
+ </tr>
+ <tr>
+  <td class="kalDruck" style="vertical-align:top;">28.02.2015&nbsp;Sa</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">14:30</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">18:30</td>
+  <td class="kalDruck" style="vertical-align:top;">Heinkelstraße 47, 71384 Weinstadt</td>
+  <td class="kalDruck" style="vertical-align:top;">Christus-Zentrum Weinstadt e. V.</td>
+  <td class="kalDruck" style="vertical-align:top;">2-teiliges Seminar mit Dr. Arne Elsen</td>
+ </tr>
+ <tr>
+  <td class="kalDruck" style="vertical-align:top;">28.02.2015&nbsp;Sa</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">19:30</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">22:00</td>
+  <td class="kalDruck" style="vertical-align:top;">Heinkelstraße 47, 71384 Weinstadt</td>
+  <td class="kalDruck" style="vertical-align:top;">Christus-Zentrum Weinstadt e. V.</td>
+  <td class="kalDruck" style="vertical-align:top;">Gottesdienst mit anschließendem Heilungsgebet</td>
+ </tr>
+ <tr>
+  <td class="kalDruck" style="vertical-align:top;">01.03.2015&nbsp;So</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">10:00</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">13:00</td>
+  <td class="kalDruck" style="vertical-align:top;">Heinkelstr. 47, 71384 Weinstadt</td>
+  <td class="kalDruck" style="vertical-align:top;">Christus-Zentrum Weinstadt e. V.</td>
+  <td class="kalDruck" style="vertical-align:top;">Gottesdienst mit anschließendem Heilungsgebet</td>
+ </tr>
+ <tr>
+  <td class="kalDruck" style="vertical-align:top;">10.10.2015&nbsp;Sa</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">13:00</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">18:00</td>
+  <td class="kalDruck" style="vertical-align:top;">CZ Hannover</td>
+  <td class="kalDruck" style="vertical-align:top;">Seminar: 2 wie bete ich für Kranke'</td>
+  <td class="kalDruck" style="vertical-align:top;">&nbsp;</td>
+ </tr>
+ <tr>
+  <td class="kalDruck" style="vertical-align:top;">10.10.2015&nbsp;Sa</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">19:30</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">22:30</td>
+  <td class="kalDruck" style="vertical-align:top;">CZ Hannover</td>
+  <td class="kalDruck" style="vertical-align:top;">Heilungsgottesdienst</td>
+  <td class="kalDruck" style="vertical-align:top;">&nbsp;</td>
+ </tr>
+ <tr>
+  <td class="kalDruck" style="vertical-align:top;">06.11.2015&nbsp;Fr</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">19:30</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">22:00</td>
+  <td class="kalDruck" style="vertical-align:top;">Jahnstrasse 31a, 91781 Weissenburg</td>
+  <td class="kalDruck" style="vertical-align:top;">FCG Weißenburg</td>
+  <td class="kalDruck" style="vertical-align:top;">Gottesdienst mit anschließendem Heilungsgebet</td>
+ </tr>
+ <tr>
+  <td class="kalDruck" style="vertical-align:top;">07.11.2015&nbsp;Sa</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">19:30</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">22:00</td>
+  <td class="kalDruck" style="vertical-align:top;">Jahnstrasse 31a, 91781 Weissenburg</td>
+  <td class="kalDruck" style="vertical-align:top;">FCG Weißenburg</td>
+  <td class="kalDruck" style="vertical-align:top;">Gottesdienst mit anschließendem Heilungsgebet</td>
+ </tr>
+ <tr>
+  <td class="kalDruck" style="vertical-align:top;">08.11.2015&nbsp;So</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">10:00</td>
+  <td class="kalDruck" style="vertical-align:top;text-align:center;">13:00</td>
+  <td class="kalDruck" style="vertical-align:top;">Jahnstrasse 31a, 91781 Weissenburg</td>
+  <td class="kalDruck" style="vertical-align:top;">FCG Weißenburg</td>
+  <td class="kalDruck" style="vertical-align:top;">Gottesdienst</td>
+ </tr>
+</table>
+
+</div>
+
+
+<!-- +++++++++++++++ Ende Scriptausgabe +++++++++++++++ -->
+</div>
+
+</body>
+</html>
